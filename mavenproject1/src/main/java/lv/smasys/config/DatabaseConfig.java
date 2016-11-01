@@ -1,4 +1,4 @@
-package au.com.riosoftware.firstapp.config;
+package lv.smasys.config;
 
 import java.util.Properties;
 

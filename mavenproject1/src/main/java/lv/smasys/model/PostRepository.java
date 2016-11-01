@@ -1,4 +1,4 @@
-package au.com.riosoftware.firstapp.domain;
+package lv.smasys.model;
 
 import org.springframework.data.repository.CrudRepository;
 

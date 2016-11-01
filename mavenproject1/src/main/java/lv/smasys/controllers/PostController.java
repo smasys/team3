@@ -1,7 +1,7 @@
-package au.com.riosoftware.firstapp.controllers;
+package lv.smasys.controllers;
 
-import au.com.riosoftware.firstapp.domain.Post;
-import au.com.riosoftware.firstapp.domain.PostRepository;
+import lv.smasys.model.Post;
+import lv.smasys.model.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

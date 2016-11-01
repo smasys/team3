@@ -1,7 +1,7 @@
-package au.com.riosoftware.firstapp;
+package lv.smasys;
 
-import au.com.riosoftware.firstapp.domain.Post;
-import au.com.riosoftware.firstapp.domain.PostRepository;
+import lv.smasys.model.Post;
+import lv.smasys.model.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
