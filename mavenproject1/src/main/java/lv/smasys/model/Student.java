@@ -1,22 +1,19 @@
 // Евгений Травченко еще тот козел!
 package lv.smasys.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "STUDENTS")
-public class Student {
-
-    
-    
-    
-    
+public class Student implements Serializable {
     
 //Student Id number
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "studentid")
+    
     private int studentid;
 //Student First Name
     @Column(name = "firstname")
@@ -30,6 +27,8 @@ public class Student {
 //Student e-mail Address
     @Column(name = "mail")
     private String mail;
+    @OneToOne(mappedBy = "student")
+    private Registration registration;
 
     public Student() {
     }
@@ -81,6 +80,14 @@ public class Student {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+    
+    public Registration getRegistration() {
+        return registration;
+    }
+ 
+    public void setRegistration(Registration registration) {
+        this.registration = registration;
     }
 
 }
