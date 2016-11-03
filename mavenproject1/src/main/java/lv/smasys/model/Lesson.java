@@ -1,23 +1,24 @@
 // Евгений Травченко еще тот козел!
 
 
-package Operators;
+package lv.smasys.model;
 
 import javax.persistence.*;
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "LESSONS")
 public class Lesson {
 	//Lesson ID #
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "lessonid")
 	private int lessonid;
 	//Lesson title
     @Column(name = "title")
 	private String title;
 	//Teacher's ID #
-    @Column(name = "teacherid")
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "Teacher", cascade = CascadeType.ALL)
 	private int teacherid;
 	//Student's Earned Credit Points
     @Column(name = "crpoints")

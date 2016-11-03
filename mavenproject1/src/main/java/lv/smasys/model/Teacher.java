@@ -1,16 +1,17 @@
 // Евгений Травченко еще тот козел!
 
 
-package Operators;
+package lv.smasys.model;
 
 import javax.persistence.*;
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "TEACHERS")
 public class Teacher {
 	//Teacher's ID number
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "teacherid")
 	private int teacherid;
 	//Teacher's First Name

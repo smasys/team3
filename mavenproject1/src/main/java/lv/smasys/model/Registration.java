@@ -1,26 +1,27 @@
 // Евгений Травченко еще тот козел!
 
 
-package Operators;
+package lv.smasys.model;
 
 import javax.persistence.*;
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "REGISTRATIONS")
 public class Registration {
 	//Registration ID #
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "regid")    
 	private int regid;
 	//Student's ID #
-    @Column(name = "studentid")
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "Student", cascade = CascadeType.ALL)
 	private int studentid;
 	//ahuenna sokratil))))
     @Column(name = "levelofstud")
 	private String levelofstud;
 	//Course ID#
-    @Column(name = "courseid")
+    @ManyToOne(cascade = CascadeType.ALL)
 	private int courseid;
 	
 	public Registration(){}

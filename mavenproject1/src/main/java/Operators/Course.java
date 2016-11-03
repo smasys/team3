@@ -4,19 +4,20 @@
 package Operators;
 
 import javax.persistence.*;
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "COURSES")
 public class Course {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "courseid")
 	private int courseid;
     @Column(name = "title")
 	private String title;
-    @Column(name = "studentid")
+    @ManyToOne(cascade = CascadeType.ALL)
 	private int studentid;
-    @Column(name = "lessonid")
+    @ManyToOne(cascade = CascadeType.ALL)
 	private int lessonid;
 	
 	public Course(){}
