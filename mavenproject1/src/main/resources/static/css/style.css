@@ -1,0 +1,178 @@
+
+/********** TEACHERS **********/
+/********** HEADER ************/
+
+*, html {
+    margin:0;
+    padding:0;  
+}
+
+#wrapper {}
+
+div.header {
+    background-color:#3E3232;
+    min-width:100%;
+    height:50px;
+    box-shadow: 0px -25px 100px black;
+}
+
+div.headerContent{
+    text-align: center;
+}
+
+div.login_form{
+    
+}
+
+h1.name{
+    color: whitesmoke;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 24px; 
+    float:left;
+    margin-left: 27%;
+    margin-top: 7px;
+}
+
+input.logout{
+    float:left;
+    margin-left: 28%;
+    height: 50px;
+    width: 100px;
+    background-color: darkred;
+    border-right: 1px solid silver;
+    border-left: 1px solid silver;
+    border-bottom: none;
+    border-top: none;
+    color: whitesmoke;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; 
+}
+
+input.logout:hover{
+    background-color: red;
+    color: white;
+}
+
+/********** TABLE *************/
+
+#bodyContent{
+    width: 50%;
+    margin: 0 auto;
+}
+
+table.courses{
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 50px;
+    padding: 0;
+}
+
+table.courses td {
+    padding: 4px;
+    text-align: left;
+    border-top: 1px solid silver;
+    height: 50px;
+}
+
+table.courses th {
+    padding: 6px;
+}
+
+table.courses tr {
+}
+
+input.manage{
+    float: right;
+    height: 30px;
+    width: 75px;
+    padding: 0;
+    margin-bottom: -1px;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    border-right: 1px solid silver;
+    border-left: 1px solid silver;
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+    border-radius: 8px;
+    color: darkblue;
+    font-family: Arial;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; 
+}
+input.manage:hover {    
+    background-color: #749CE4;
+    color: white; 
+}
+
+input.remove{
+    float: right;
+    height: 30px;
+    width: 75px;
+    margin-bottom: -1px;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    border-right: 1px solid silver;
+    border-left: 1px solid silver;
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+    border-radius: 8px;
+    color: darkred;
+    font-family: Arial;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; 
+}
+input.remove:hover {    
+    background-color: #E16F71;
+    color: white; 
+}
+
+input.add{
+    float: left;
+    margin-left: 40%;
+    height: 30px;
+    width: 150px;
+    padding: 0;
+    margin-bottom: -10px;
+    background-color: whitesmoke;
+    border-right: 1px solid silver;
+    border-left: 1px solid silver;
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+    border-radius: 8px;
+    color: black;
+    font-family: Arial;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; 
+}
+input.add:hover {  
+    background-color: gray;
+    color: white;
+}
+
+a.courses{
+    margin-left: 5%;
+}
+a.action_title{
+    margin-left: 55%;
+}
+a.courses_title{
+    float: left;
+    margin-left: 10%;
+}
+a.new{
+      font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC
+}

@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>SMaSys</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="login_container">
-            <h1 class="logo">SMaSys</h1>
-            <div class="login">
-                <form action="">
-                    <label for="fname">E-Mail</label>
-                    <input type="text" id="fname" name="firstname">
+<html lang="en" ng-app="manager">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>SMaSys</title>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</head>
 
-                    <label for="lname">Password</label>
-                    <input type="text" id="lname" name="lastname">
-
-                    <input type="submit" value="Login" class="login">
-                </form>
-            </div>
-        </div>
-    </body>
+<body>
+<div class="container">
+    <div layout:fragment="content">
+       <h1>SMaSys</h1>
+        <form method="post" name="comment_form" id="comment_form" action="/posts/" role="form" th:action="@{/}" th:object="${post}">
+                <label for="email">E-Mail</label>                
+                <input type="text" 
+                       th:text="${email}"
+                       id="fname" 
+                       name="email" />
+                <label for="pass">Password</label>
+                <input type="text" 
+                       th:text="${pass}"
+                       id="fname" 
+                       name="pass" />
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
 </html>
