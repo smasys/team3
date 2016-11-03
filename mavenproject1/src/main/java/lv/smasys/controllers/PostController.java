@@ -21,6 +21,7 @@ public class PostController {
     @RequestMapping(value="", method=RequestMethod.GET)
     public String listPosts(Model model) {
         model.addAttribute("posts", repository.findAll());
+        
         return "posts/list";
     }
 

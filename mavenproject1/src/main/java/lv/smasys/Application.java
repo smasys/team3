@@ -23,4 +23,5 @@ public class Application implements CommandLineRunner {
 //            repository.save(new Post("My post number #" + (i+1)));
 //        }
     }
+    
 }
