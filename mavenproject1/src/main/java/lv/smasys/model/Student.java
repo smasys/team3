@@ -8,12 +8,12 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "STUDENTS")
 public class Student implements Serializable {
-    
+
 //Student Id number
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "studentid")
-    
+
     private int studentid;
 //Student First Name
     @Column(name = "firstname")
@@ -81,11 +81,11 @@ public class Student implements Serializable {
     public void setMail(String mail) {
         this.mail = mail;
     }
-    
+
     public Registration getRegistration() {
         return registration;
     }
- 
+
     public void setRegistration(Registration registration) {
         this.registration = registration;
     }

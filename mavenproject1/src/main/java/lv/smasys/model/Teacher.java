@@ -1,12 +1,13 @@
 // Евгений Травченко еще тот козел!
 package lv.smasys.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "TEACHERS")
-public class Teacher {
+public class Teacher implements Serializable {
     //Teacher's ID number
 
     @Id
