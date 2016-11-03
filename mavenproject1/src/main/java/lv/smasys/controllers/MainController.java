@@ -15,8 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class MainController {
 
   @RequestMapping(value="/", method = RequestMethod.GET)
-  public ModelAndView index() {
-    return new ModelAndView("redirect:/posts");
+  public String index() {
+    return "posts/login";
   }
 
 }
