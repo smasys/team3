@@ -13,7 +13,7 @@ public class Registration implements Serializable {
     //Registration ID #
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "regid") 
+    @Column(name = "regid")
     private int regid;
     //Student's ID #
     @Column(name = "levelofstud")
@@ -23,10 +23,15 @@ public class Registration implements Serializable {
     @JoinColumn(name = "studentid", insertable = false, updatable = false,
             nullable = false)
     private Student student;
-    
-    @OneToMany(cascade={CascadeType.ALL})
-    @JoinColumn(name="couseid")
+
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "regid")
     private List<Course> courses;
+
+    @OneToOne
+    @JoinColumn(name = "gradeid", insertable = false, updatable = false,
+            nullable = false)
+    private Grade grade;
 
     public Registration() {
     }
@@ -34,7 +39,7 @@ public class Registration implements Serializable {
     public Registration(String levelofstud) {
         this.levelofstud = levelofstud;
     }
-    
+
     public int getRegId() {
         return regid;
     }
@@ -57,8 +62,8 @@ public class Registration implements Serializable {
 
     public void setStudent(Student student) {
         this.student = student;
-    }   
-    
+    }
+
     public List<Course> getCourses() {
         return courses;
     }
@@ -66,6 +71,13 @@ public class Registration implements Serializable {
     public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
-    
+
+    public Grade getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
+    }
 
 }
