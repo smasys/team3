@@ -26,6 +26,7 @@ public class Student implements Serializable {
 //Student e-mail Address
     @Column(name = "mail")
     private String mail;
+    @Column(name = "password")
     private String password;
     
     @ManyToOne
