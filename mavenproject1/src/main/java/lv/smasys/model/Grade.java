@@ -1,51 +1,76 @@
-// Евгений Травченко еще тот козел!
+package lv.smasys.model;
 
-
-package Operators;
-
+import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
-//@Entity
-//@Table(name = "GRADES")
-public class Grade {
-//    @Column(name = "lessonid")
-//    private int lessonid;
-//    @Column(name = "studentid")
-//    private int studentid;
-//	//Student's grade for lesson
-//    @Column(name = "grade")
-//	private double grade;
-//	//Lessons date
-//    @Column(name = "date")
-//	private String date;
-//	
-//	public Grade(){}
-//	public Grade(double grade, String date){
-//		this.grade = grade;
-//		this.date = date;
-//	}
-//	public int getLessonId() {
-//		return lessonid;
-//	}
-//	public void setLessonId(int lessonid) {
-//		this.lessonid = lessonid;
-//	}
-//	public int getStudentId() {
-//		return studentid;
-//	}
-//	public void setStudentId(int studentid) {
-//		this.studentid = studentid;
-//	}
-//	public double getGrade() {
-//		return grade;
-//	}
-//	public void setGrade(double grade) {
-//		this.grade = grade;
-//	}
-//	public String getDate() {
-//		return date;
-//	}
-//	public void setDate(String date) {
-//		this.date = date;
-//	}
+@Entity
+@Table(name = "GRADES")
+public class Grade implements Serializable {
+
+    //@Id
+    //@GeneratedValue(strategy = IDENTITY)
+    //@Column(name = "gradeid")
+    //private int gradeid;
+    //Student's grade for lesson
+    @Id
+    @OneToOne
+    @JoinColumn(name = "studentid", insertable = false, updatable = false,
+            nullable = false)
+    private Student student;
+
+    @ManyToOne
+    @JoinColumn(name = "lessonid",
+            insertable = false, updatable = false,
+            nullable = false)
+    private Lesson lesson;
+
+    @Column(name = "grade")
+    private double grade;
+    //Lessons date
+    @Column(name = "gradedate")
+    private String gradedate;
+
+    public Grade() {
+    }
+
+    public Grade(double grade, String date, Lesson lesson, Student student) {
+        this.grade = grade;
+        this.gradedate = date;
+        this.lesson = lesson;
+        this.student = student;
+    }
+
+    public double getGrade() {
+        return grade;
+    }
+
+    public void setGrade(double grade) {
+        this.grade = grade;
+    }
+
+    public String getGradedate() {
+        return gradedate;
+    }
+
+    public void setGradedate(String gradedate) {
+        this.gradedate = gradedate;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public Lesson getLesson() {
+        return lesson;
+    }
+
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
+    }
+
 }
