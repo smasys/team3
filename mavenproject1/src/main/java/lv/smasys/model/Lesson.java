@@ -2,6 +2,7 @@
 package lv.smasys.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -31,19 +32,18 @@ public class Lesson implements Serializable {
     @JoinColumn(name = "teacherid", insertable = false, updatable = false,
             nullable = false)
     private Teacher teacher;
-
-    @ManyToOne
-    @JoinColumn(name = "gradeid",
-            insertable = false, updatable = false,
-            nullable = false)
-    private Grade grade;
+    
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "lessonid")
+    private List<Grade> grades;
 
     public Lesson() {
     }
 
-    public Lesson(String title, double crpoints) {
+    public Lesson(String title, double crpoints, Teacher teacher) {
         this.title = title;
         this.crpoints = crpoints;
+        this.teacher = teacher;
     }
 
     public int getLessonId() {
@@ -86,12 +86,12 @@ public class Lesson implements Serializable {
         this.teacher = teacher;
     }
 
-    public Grade getGrade() {
-        return grade;
+    public List<Grade> getGrades() {
+        return grades;
     }
 
-    public void setGrade(Grade grade) {
-        this.grade = grade;
+    public void setGrades(List<Grade> grades) {
+        this.grades = grades;
     }
 
 }

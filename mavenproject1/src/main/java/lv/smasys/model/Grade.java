@@ -3,34 +3,42 @@ package lv.smasys.model;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "GRADES")
 public class Grade implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "gradeid")
-    private int gradeid;
+    //@Id
+    //@GeneratedValue(strategy = IDENTITY)
+    //@Column(name = "gradeid")
+    //private int gradeid;
     //Student's grade for lesson
+    @Id
+    @OneToOne
+    @JoinColumn(name = "studentid", insertable = false, updatable = false,
+            nullable = false)
+    private Student student;
+
+    @ManyToOne
+    @JoinColumn(name = "lessonid",
+            insertable = false, updatable = false,
+            nullable = false)
+    private Lesson lesson;
+
     @Column(name = "grade")
     private double grade;
     //Lessons date
     @Column(name = "gradedate")
     private String gradedate;
-    @OneToOne(mappedBy = "grade")
-    private Registration registration;
-    @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "gradeid")
-    private List<Lesson> lessons;
 
     public Grade() {
     }
 
-    public Grade(double grade, String date) {
+    public Grade(double grade, String date, Lesson lesson, Student student) {
         this.grade = grade;
         this.gradedate = date;
+        this.lesson = lesson;
+        this.student = student;
     }
 
     public double getGrade() {
@@ -49,28 +57,20 @@ public class Grade implements Serializable {
         this.gradedate = gradedate;
     }
 
-    public int getGradeid() {
-        return gradeid;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setGradeid(int gradeid) {
-        this.gradeid = gradeid;
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
-    public Registration getRegistration() {
-        return registration;
+    public Lesson getLesson() {
+        return lesson;
     }
 
-    public void setRegistration(Registration registration) {
-        this.registration = registration;
-    }
-
-    public List<Lesson> getLessons() {
-        return lessons;
-    }
-
-    public void setLessons(List<Lesson> lessons) {
-        this.lessons = lessons;
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
     }
 
 }

@@ -23,6 +23,7 @@ public class Teacher implements Serializable {
     //Teacher's Phone number
     @Column(name = "phone")
     private String phone;
+    private String password;
     //Teachers e-Mail Address
     @Column(name = "mail")
     private String mail;
@@ -32,12 +33,13 @@ public class Teacher implements Serializable {
     public Teacher() {
     }
 
-    public Teacher(int teacherid, String firstname, String lastname, String phone, String mail) {
+    public Teacher(int teacherid, String firstname, String lastname, String phone, String mail, String password) {
         this.teacherid = teacherid;
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;
         this.mail = mail;
+        this.password = password;
     }
 
     public int getId() {
@@ -86,6 +88,14 @@ public class Teacher implements Serializable {
 
     public void setLesson(Lesson lesson) {
         this.lesson = lesson;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }

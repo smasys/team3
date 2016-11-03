@@ -1,4 +1,3 @@
-// Евгений Травченко еще тот козел!
 package lv.smasys.model;
 
 import java.io.Serializable;
@@ -27,18 +26,28 @@ public class Student implements Serializable {
 //Student e-mail Address
     @Column(name = "mail")
     private String mail;
+    private String password;
+    
+    @ManyToOne
+    @JoinColumn(name = "courseid",
+            insertable = false, updatable = false,
+            nullable = false)
+    private Course course;
+    
     @OneToOne(mappedBy = "student")
-    private Registration registration;
+    private Grade grade;
 
     public Student() {
     }
 
-    public Student(int studentid, String firstname, String lastname, String phone, String mail) {
+    public Student(int studentid, String firstname, String lastname, String phone, String mail, String password, Grade grade) {
         this.studentid = studentid;
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;
         this.mail = mail;
+        this.password = password;
+        this.grade = grade;
 
     }
 
@@ -82,12 +91,28 @@ public class Student implements Serializable {
         this.mail = mail;
     }
 
-    public Registration getRegistration() {
-        return registration;
+    public String getPassword() {
+        return password;
     }
 
-    public void setRegistration(Registration registration) {
-        this.registration = registration;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Grade getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
+    }
+    
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
 }
