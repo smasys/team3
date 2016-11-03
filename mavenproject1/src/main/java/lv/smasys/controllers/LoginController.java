@@ -7,6 +7,7 @@ package lv.smasys.controllers;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import lv.smasys.model.Course;
 import lv.smasys.model.Post;
 import lv.smasys.model.Student;
 import lv.smasys.repository.StudentRepository;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
@@ -38,8 +40,22 @@ public class LoginController {
     public String index() {
         return "posts/login";
     }
+    @RequestMapping(value="/createuser",method=RequestMethod.GET)
+    public String newUser() {
+        return "createuser";
+    }
     
     
+    @RequestMapping(value = "/create_user", method = RequestMethod.POST)
+    public String create(@RequestParam("name") String name
+            ,@RequestParam("surname") String surname
+            ,@RequestParam("phone") String phone
+            ,@RequestParam("email") String email
+            ,@RequestParam("password") String password) {
+        repository.save(new Student(name, surname, phone, email, password));
+        
+        return "posts/login";
+    }
     
    
 //    @RequestMapping(value = "/{id}/edit", method = RequestMethod.GET)

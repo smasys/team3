@@ -30,7 +30,7 @@ public class DatabaseConfig {
    * DataSource definition for database connection. Settings are read from
    * the application.properties file (using the env object).
    */
-  @Bean
+  @Bean(name="dataSource")
   public DataSource dataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName(env.getProperty("db.driver"));

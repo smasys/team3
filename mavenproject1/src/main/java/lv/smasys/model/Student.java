@@ -10,7 +10,7 @@ public class Student implements Serializable {
 
 //Student Id number
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "studentid")
 
     private int studentid;
@@ -29,10 +29,9 @@ public class Student implements Serializable {
     @Column(name = "password")
     private String password;
     
+    
     @ManyToOne
-    @JoinColumn(name = "courseid",
-            insertable = false, updatable = false,
-            nullable = false)
+    @JoinColumn(name = "courseid",nullable = true)
     private Course course;
     
     @OneToOne(mappedBy = "student")
@@ -41,14 +40,14 @@ public class Student implements Serializable {
     public Student() {
     }
 
-    public Student(int studentid, String firstname, String lastname, String phone, String mail, String password, Grade grade) {
-        this.studentid = studentid;
+    public Student(String firstname, String lastname, String phone, String mail, String password) {
+        
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;
         this.mail = mail;
         this.password = password;
-        this.grade = grade;
+        
 
     }
 

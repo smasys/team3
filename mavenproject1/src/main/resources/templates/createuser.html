@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head lang="en">
+ 
+    <title>Spring Framework Guru</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Hello</h1>
+<form method="post" name="comment_form" id="comment_form" th:action="@{/create_user}" >
+                <label for="email">Name</label>                
+                <input type="text" 
+                       name="name" />
+                <label for="pass">Surname</label>
+                <input type="text" 
+                      name="surname" />
+                <label for="phone">Phone</label>
+                <input type="text" 
+                      name="phone" />
+                <label for="email">E-mail</label>
+                <input type="text" 
+                      name="email" />
+                <label for="password">Password</label>
+                <input type="password" 
+                      name="password" />
+               <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>
