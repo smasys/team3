@@ -3,12 +3,13 @@
 
 package lv.smasys.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "LESSONS")
-public class Lesson {
+public class Lesson implements Serializable {
 	//Lesson ID #
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -18,7 +19,6 @@ public class Lesson {
     @Column(name = "title")
 	private String title;
 	//Teacher's ID #
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "Teacher", cascade = CascadeType.ALL)
 	private int teacherid;
 	//Student's Earned Credit Points
     @Column(name = "crpoints")
