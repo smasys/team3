@@ -1,9 +1,7 @@
-// Евгений Травченко еще тот козел!
 package lv.smasys.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "TEACHERS")
@@ -11,7 +9,7 @@ public class Teacher implements Serializable {
     //Teacher's ID number
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "teacherid")
     private int teacherid;
     //Teacher's First Name
@@ -33,8 +31,7 @@ public class Teacher implements Serializable {
     public Teacher() {
     }
 
-    public Teacher(int teacherid, String firstname, String lastname, String phone, String mail, String password) {
-        this.teacherid = teacherid;
+    public Teacher(String firstname, String lastname, String phone, String mail, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;

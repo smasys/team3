@@ -1,10 +1,8 @@
-// Евгений Травченко еще тот козел!
 package lv.smasys.model;
 
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "LESSONS")
@@ -12,7 +10,7 @@ public class Lesson implements Serializable {
     //Lesson ID #
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "lessonid")
     private int lessonid;
     //Lesson title
@@ -24,13 +22,12 @@ public class Lesson implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "courseid",
-            insertable = false, updatable = false,
-            nullable = false)
+            nullable = true)
     private Course course;
 
     @OneToOne
-    @JoinColumn(name = "teacherid", insertable = false, updatable = false,
-            nullable = false)
+    @JoinColumn(name = "teacherid", 
+            nullable = true)
     private Teacher teacher;
     
     @OneToMany(cascade = {CascadeType.ALL})

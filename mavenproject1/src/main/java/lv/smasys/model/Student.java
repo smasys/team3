@@ -2,7 +2,6 @@ package lv.smasys.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "STUDENTS")
@@ -26,14 +25,13 @@ public class Student implements Serializable {
 //Student e-mail Address
     @Column(name = "mail")
     private String mail;
-    @Column(name = "password")
     private String password;
-    
-    
+
     @ManyToOne
-    @JoinColumn(name = "courseid",nullable = true)
+    @JoinColumn(name = "courseid",
+            nullable = true)
     private Course course;
-    
+
     @OneToOne(mappedBy = "student")
     private Grade grade;
 
@@ -41,13 +39,11 @@ public class Student implements Serializable {
     }
 
     public Student(String firstname, String lastname, String phone, String mail, String password) {
-        
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;
         this.mail = mail;
         this.password = password;
-        
 
     }
 
@@ -99,22 +95,14 @@ public class Student implements Serializable {
         this.password = password;
     }
 
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-     public Grade getGrade() {
+    public Grade getGrade() {
         return grade;
     }
 
     public void setGrade(Grade grade) {
         this.grade = grade;
     }
-    
+
     public Course getCourse() {
         return course;
     }
@@ -124,8 +112,3 @@ public class Student implements Serializable {
     }
 
 }
-
-   
-
-
-
