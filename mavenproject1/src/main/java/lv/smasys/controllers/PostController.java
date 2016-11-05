@@ -31,7 +31,7 @@ public class PostController {
         }
         if(role.equals("ROLE_USER")){
             model.addAttribute("user",new Post(name+" student"));
-            return "teststudent";
+            return "posts/student";
         }
         repository.save(new Post(name));
         model.addAttribute("posts", repository.findAll());
