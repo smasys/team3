@@ -1,7 +1,7 @@
 package lv.smasys.controllers;
 
 import lv.smasys.model.Post;
-import lv.smasys.model.PostRepository;
+import lv.smasys.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
