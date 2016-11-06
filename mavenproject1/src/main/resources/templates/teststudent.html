@@ -12,33 +12,30 @@
  
 <h2>Fellow <!--<span th:text="${user.message}" />-->!!!</h2>
 
-<form method="post" name="comment_form" id="comment_form" th:action="@{/join_teacher}" >
-                <label for="teacherid">Teacher ID</label>                
+<form method="post" name="comment_form" id="comment_form" th:action="@{/student/join_course}" >
+                <label for="courseid">Teacher ID</label>                
                 <input type="text" 
-                       name="teacherid" /> <br/>
+                       name="courseid" /> <br/>
               
                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
             <button type="submit" id="submit" class="btn btn-primary">Join</button>
 </form>
 
-    <table>
+    <table >
         <thead>
         <tr>
-            <th>Teachers</th>
-            <th>Action</th>
+            <th>Teacher</th>
+            <th>Lesson</th>
             
         </tr>
         </thead>
         <tbody>
-        <tr data-th-each="teacher : ${teachers}">
-            <td class="message" data-th-text="${teacher.id}"></td>
-
-            <td>
-                <!--<a th:href="@{'/posts/{id}/delete'(id=${post.id})}" class="delete" th:attr="name=${post.message}">-->
-                    Teacher    <span th:text="${teacher.firstname}" /> <span th:text="${teacher.lastname}" />
-               
-            </td>            
-        </tr>
+            <tr data-th-each="lesson : ${lessons}">               
+                <td data-th-text="${lesson.teacher.lastname}"></td>
+                <td  data-th-text="${lesson.title}"></td>
+            
+            </tr>
+     
         </tbody>
     </table>
 

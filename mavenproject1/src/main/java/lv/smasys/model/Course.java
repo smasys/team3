@@ -11,32 +11,33 @@ public class Course implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "courseid")
-    private int courseid;
+    private long courseid;
 
     @Column(name = "title")
     private String title;
 
-    @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "courseid")
+    @OneToMany(mappedBy="course",targetEntity=Lesson.class,cascade = {CascadeType.ALL})    
     private List<Lesson> lessons;
 
-    @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "courseid")
+    @OneToMany(mappedBy="course",targetEntity=Student.class,cascade = {CascadeType.ALL})    
     private List<Student> students;
+//    @OneToMany(cascade = {CascadeType.ALL})
+//    @JoinColumn(name = "courseid")
+//    private List<Student> students;
 
     public Course() {
     }
 
-    public Course(String title, List<Lesson> lessons) {
+    public Course(String title) {
         this.title = title;
         this.lessons = lessons;
     }
 
-    public int getCourseId() {
+    public long getCourseid() {
         return courseid;
     }
 
-    public void setCourseId(int courseid) {
+    public void setCourseid(long courseid) {
         this.courseid = courseid;
     }
 

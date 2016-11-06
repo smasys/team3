@@ -1,6 +1,7 @@
 package lv.smasys.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
@@ -25,8 +26,8 @@ public class Teacher implements Serializable {
     //Teachers e-Mail Address
     @Column(name = "mail")
     private String mail;
-    @OneToOne(mappedBy = "teacher")
-    private Lesson lesson;
+    @OneToMany(mappedBy="teacher",targetEntity=Lesson.class,cascade = {CascadeType.ALL})
+    private List<Lesson> lessons;
 
     public Teacher() {
     }
@@ -59,6 +60,14 @@ public class Teacher implements Serializable {
         return lastname;
     }
 
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
+    public void setLessons(List<Lesson> lessons) {
+        this.lessons = lessons;
+    }
+
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
@@ -79,13 +88,7 @@ public class Teacher implements Serializable {
         this.mail = mail;
     }
 
-    public Lesson getLesson() {
-        return lesson;
-    }
-
-    public void setLesson(Lesson lesson) {
-        this.lesson = lesson;
-    }
+  
 
     public String getPassword() {
         return password;

@@ -5,6 +5,7 @@
  */
 package lv.smasys.repository;
 
+import java.util.List;
 import lv.smasys.model.Post;
 import lv.smasys.model.Student;
 import org.springframework.data.repository.CrudRepository;
@@ -14,5 +15,5 @@ import org.springframework.data.repository.CrudRepository;
  * @author student
  */
 public interface StudentRepository extends CrudRepository<Student, Long>{
-    
+    List<Student> findByMail(String mail);
 }

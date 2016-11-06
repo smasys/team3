@@ -6,14 +6,19 @@
 package lv.smasys.controllers;
 
 import lv.smasys.model.Authorities;
+import lv.smasys.model.Post;
 import lv.smasys.model.Student;
 import lv.smasys.model.Teacher;
 import lv.smasys.model.User;
 import lv.smasys.repository.AuthoritiesRepository;
+import lv.smasys.repository.CourseRepository;
+import lv.smasys.repository.LessonRepository;
 import lv.smasys.repository.StudentRepository;
 import lv.smasys.repository.TeacherRepository;
 import lv.smasys.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,6 +41,10 @@ public class LoginController {
     UserRepository userRepository;
     @Autowired
     TeacherRepository teacherRepository;
+    @Autowired
+    LessonRepository lessonRepository;
+    @Autowired
+    CourseRepository courseRepository;
     
 //    //@RequestMapping("/{userId}/bookmarks")
 //    @RequestMapping(value="/",method=RequestMethod.POST)
@@ -79,6 +88,20 @@ public class LoginController {
         return "posts/login";
     }   
    
+    @RequestMapping(value = "/success", method = RequestMethod.GET)
+    public String listPosts(Model model, Authentication authentication) {
+        String role="";
+        String name="";
+        for (GrantedAuthority authority : authentication.getAuthorities()) {
+            role = authority.getAuthority();
+            name = authentication.getName()+role;
+        }
+        if(role.equals("ROLE_USER")){  
+            model.addAttribute("courses", courseRepository.findAll());
+            return "redirect:/teststudent";
+        }    
+        return "posts";
+    }
 
     
 }

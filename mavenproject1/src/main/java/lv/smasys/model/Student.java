@@ -1,18 +1,18 @@
 package lv.smasys.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "STUDENTS")
+@Table(name = "student")
 public class Student implements Serializable {
 
 //Student Id number
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)    
     @Column(name = "studentid")
-
-    private int studentid;
+    private long studentid;
 //Student First Name
     @Column(name = "firstname")
     private String firstname;
@@ -25,6 +25,7 @@ public class Student implements Serializable {
 //Student e-mail Address
     @Column(name = "mail")
     private String mail;
+    @Column(name = "password")
     private String password;
 
     @ManyToOne
@@ -34,6 +35,8 @@ public class Student implements Serializable {
 
     @OneToOne(mappedBy = "student")
     private Grade grade;
+    
+    
 
     public Student() {
     }
@@ -47,11 +50,11 @@ public class Student implements Serializable {
 
     }
 
-    public int getId() {
+    public long getId() {
         return studentid;
     }
 
-    public void setId(int studentid) {
+    public void setId(long studentid) {
         this.studentid = studentid;
     }
 
