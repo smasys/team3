@@ -5,37 +5,30 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
     <title>SMaSys</title>
-    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <link href="/css/style_1.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous" />
 </head>
-
-<body>
-    
+<body>   
 <div class="container">
-    <div layout:fragment="content">
-       <h1>SMaSys</h1>
+       <h1 class="login">SMaSys</h1>
+       <p class="login">Student Management System</p>
+       <div class="login">
        <div th:if="${param.error}">
-            Invalid username and password.
+            Invalid username or password.
     </div>
     <div th:if="${param.logout}">
             You have been logged out.
     </div>
         <form method="post" name="comment_form" id="comment_form" th:action="@{/}" >
-                <label for="email">E-Mail</label>                
-                <input type="text" 
-                       name="username" />
-                <label for="pass">Password</label>
-                <input type="password" 
-                      name="password" />
-               <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                <label for="email">E-Mail</label>  <br />              
+                <input class="email" type="text" name="username" /> <br />
+                <label for="pass">Password</label> <br />
+                <input class="pass" type="password" name="password" />
+               <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" /> <br />
+            <button type="submit" id="submit" class="login">LOGIN</button> <br />
         </form>
-       <a href="/?logout">logout</a>
-       <a href="/createuser">create new user</a>
+       <a class="register" href="/createuser">Register</a>
     </div>
 </div>
 </body>
