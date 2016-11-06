@@ -100,8 +100,10 @@ public class LoginController {
             model.addAttribute("courses", courseRepository.findAll());
             return "redirect:/teststudent";
         }    
-        return "posts";
+        return "redirect:/testteacher";
     }
+    
+    
 
     
 }

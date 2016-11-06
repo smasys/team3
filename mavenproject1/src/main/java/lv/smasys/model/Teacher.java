@@ -28,6 +28,8 @@ public class Teacher implements Serializable {
     private String mail;
     @OneToMany(mappedBy="teacher",targetEntity=Lesson.class,cascade = {CascadeType.ALL})
     private List<Lesson> lessons;
+    @OneToMany(mappedBy="teacher",targetEntity=Course.class,cascade = {CascadeType.ALL})
+    private List<Course> courses;
 
     public Teacher() {
     }
@@ -40,13 +42,15 @@ public class Teacher implements Serializable {
         this.password = password;
     }
 
-    public int getId() {
+    public int getTeacherid() {
         return teacherid;
     }
 
-    public void setId(int id) {
-        this.teacherid = id;
+    public void setTeacherid(int teacherid) {
+        this.teacherid = teacherid;
     }
+
+  
 
     public String getFirstname() {
         return firstname;
@@ -62,6 +66,14 @@ public class Teacher implements Serializable {
 
     public List<Lesson> getLessons() {
         return lessons;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     public void setLessons(List<Lesson> lessons) {

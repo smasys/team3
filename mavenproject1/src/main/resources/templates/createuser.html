@@ -23,9 +23,11 @@
             <label for="email">E-mail</label><br />
             <input class="form" type="text" name="email" /><br />
             <label for="password">Password</label><br />
-            <input class="form" type="password" name="password" />
+            <input class="form" type="password" name="password" /><br />
+            <label for="role">Role</label><br />
+            <input class="form" type="text" name="role" /><br />
             <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-            <button type="submit" id="submit" class="register_form">Create</button>
+            <button type="submit" id="submit" class="register_form">Register</button>
         </form>
     </div>
 </div>

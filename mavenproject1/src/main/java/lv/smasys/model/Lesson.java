@@ -33,7 +33,8 @@ public class Lesson implements Serializable {
     @OneToMany(cascade = {CascadeType.ALL})
     @JoinColumn(name = "lessonid")
     private List<Grade> grades;
-    
+    @Column(name = "description")
+    private String description;
    
     public Lesson() {
     }
@@ -60,11 +61,11 @@ public class Lesson implements Serializable {
         this.title = title;
     }
 
-    public double getCrpoint() {
+    public double getCrpoints() {
         return crpoints;
     }
 
-    public void setCrpoint(double crpoints) {
+    public void setCrpoints(double crpoints) {
         this.crpoints = crpoints;
     }
 
@@ -78,6 +79,14 @@ public class Lesson implements Serializable {
 
     public Teacher getTeacher() {
         return teacher;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setTeacher(Teacher teacher) {
