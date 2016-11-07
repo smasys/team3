@@ -36,7 +36,7 @@ public class TeacherController {
     LessonRepository lessonRepository;
     private static final Logger log = LoggerFactory.getLogger(TeacherController.class);
 
-    @RequestMapping(value = "/testteacher")
+    @RequestMapping(value = "/posts/testteacher")
     public String listCourses(Model model, Authentication authentication) {
         String username = getUsername(authentication);
         List<Teacher> teachers = teacherRepository.findByMail(username);
@@ -52,7 +52,7 @@ public class TeacherController {
         }
 
         //model.addAttribute("courses", courseRepository.findAll());
-        return "testteacher";
+        return "posts/testteacher";
     }
 
     public String getUsername(Authentication aut) {
@@ -63,14 +63,14 @@ public class TeacherController {
         return username;
     }
 
-    @RequestMapping(value = "/new_lesson", method = RequestMethod.GET)
+    @RequestMapping(value = "/newlesson", method = RequestMethod.GET)
     public String newLesson(Authentication authentication) {
-        return "newlesson";
+        return "posts/newlesson";
     }
 
-    @RequestMapping(value = "/new_course", method = RequestMethod.GET)
+    @RequestMapping(value = "/newcourse", method = RequestMethod.GET)
     public String newCourse(Authentication authentication) {
-        return "newcourse";
+        return "posts/newcourse";
     }
 
     @RequestMapping(value = "/create_lesson", method = RequestMethod.POST)
@@ -86,6 +86,7 @@ public class TeacherController {
             if (courseRepository.findOne(courseid).getPassword().equals(password)) {
 
                 lessonRepository.save(lesson);
+
                 log.info("Lesson '" + lesson.getTitle() + "' created by " + t.getFirstname() + " " + t.getLastname());
             } else {
                 model.addAttribute("message", "Wrong Password!");
@@ -94,14 +95,14 @@ public class TeacherController {
             }
         }
 
-        return "redirect:/testteacher";
+        return "redirect:posts/testteacher";
     }
 
     @RequestMapping(value = "/create_course", method = RequestMethod.POST)
     public String createCourse(@RequestParam("title") String title,
-             @RequestParam("description") String description,
-             @RequestParam("password") String password,
-             Authentication authentication) {
+            @RequestParam("description") String description,
+            @RequestParam("password") String password,
+            Authentication authentication) {
 
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
@@ -113,6 +114,6 @@ public class TeacherController {
             log.info("Course '" + course.getTitle() + "' created by " + t.getFirstname() + " " + t.getLastname());
         }
 
-        return "redirect:/testteacher";
+        return "redirect:posts/testteacher";
     }
 }

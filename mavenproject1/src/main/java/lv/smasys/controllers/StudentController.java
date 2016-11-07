@@ -89,7 +89,7 @@ public class StudentController {
            log.info("Student '"+s.getFirstname()+" "+s.getLastname()+"' added to '"+course.getTitle()+"'");
         }
              
-        return new ModelAndView("redirect:/teststudent");
+        return new ModelAndView("redirect:posts/teststudent");
     }
     
     public String getUsername(Authentication aut){

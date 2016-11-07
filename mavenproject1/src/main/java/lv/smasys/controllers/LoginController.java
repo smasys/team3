@@ -110,9 +110,9 @@ public class LoginController {
         }
         if(role.equals("ROLE_USER")){  
             model.addAttribute("courses", courseRepository.findAll());
-            return "redirect:/teststudent";
+            return "redirect:posts/teststudent";
         }else if(role.equals("ROLE_ADMIN")){
-            return "redirect:/testteacher";
+            return "redirect:posts/testteacher";
         }   
         return "redirect:/?logout";
     }

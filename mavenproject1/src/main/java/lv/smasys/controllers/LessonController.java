@@ -57,7 +57,7 @@ public class LessonController {
         
         model.addAttribute("lesson", lesson);
         model.addAttribute("students", course.getStudents());
-        return "lessonpage";
+        return "posts/lessonpage";
     }
     //Show Course page 
     @RequestMapping(value = "course/{id}/show", method = RequestMethod.GET)
@@ -69,7 +69,7 @@ public class LessonController {
         model.addAttribute("course", course);
         model.addAttribute("students", course.getStudents());
         model.addAttribute("role",getRole(authentication));
-        return "coursepage";
+        return "posts/coursepage";
     }
     //Remove Student from course
     @RequestMapping(value = "/course/{id}/delete", method = RequestMethod.GET)

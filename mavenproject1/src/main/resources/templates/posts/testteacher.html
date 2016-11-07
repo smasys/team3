@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-    <head lang="en">
+<html layout:decorator="layout">
+    <div layout:fragment="content">
 
-        <title>Spring Framework Guru</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    </head>
-    <body>
+
+        
+<!--        <a href="/newcourse" class="join_curse"> <button type="button">Create Course</button></a>
+        <a href="/newlesson" class="join_curse"> <button type="button">Create Lesson</button></a>-->
+<table class="two_buttons"><tr><td>
+        <p class="join_curse"><a class="new_course" href="/newcourse">Create Course</a></p>
+        </td><td>
+        <p class="join_curse"><a class="new_course" href="/newlesson">Create Lesson</a></p>
+        
+        </td></tr></table>
+
         <h1>Hello Teacher<!--<span th:text="${user.message}" />--></h1>
 
         <h2>Create New Course or a New Lesson</h2><br/>
@@ -56,5 +61,5 @@
                 </tr>
             </tbody>
         </table>
-    </body>
+    </div>
 </html>
