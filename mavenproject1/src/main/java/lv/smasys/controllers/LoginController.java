@@ -8,9 +8,14 @@ package lv.smasys.controllers;
 import java.util.ArrayList;
 import java.util.Iterator;
 import lv.smasys.model.Course;
-import lv.smasys.model.Post;
+import lv.smasys.model.Authorities;
+import lv.smasys.model.User;
 import lv.smasys.model.Student;
+import lv.smasys.model.Teacher;
+import lv.smasys.repository.AuthoritiesRepository;
 import lv.smasys.repository.StudentRepository;
+import lv.smasys.repository.TeacherRepository;
+import lv.smasys.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +32,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
     @Autowired
-    StudentRepository repository;
+    StudentRepository studentRepository;
+    @Autowired
+    AuthoritiesRepository authoritiesRepository;    
+    @Autowired
+    UserRepository userRepository;
+    @Autowired
+    TeacherRepository teacherRepository;
     
     
 //    //@RequestMapping("/{userId}/bookmarks")
@@ -51,9 +62,19 @@ public class LoginController {
             ,@RequestParam("surname") String surname
             ,@RequestParam("phone") String phone
             ,@RequestParam("email") String email
-            ,@RequestParam("password") String password) {
-        repository.save(new Student(name, surname, phone, email, password));
-        
+            ,@RequestParam("password") String password
+            ,@RequestParam("role") String role) {
+        if(role.equals("ROLE_USER")){
+             studentRepository.save(new Student(name, surname, phone, email, password));
+             userRepository.save(new User(email,password));
+             authoritiesRepository.save(new Authorities(email,role));
+        }else if(role.equals("ROLE_ADMIN")){
+            teacherRepository.save(new Teacher(name, surname, phone, email, password));
+            userRepository.save(new User(email,password));
+            authoritiesRepository.save(new Authorities(email,role));
+        }      
+       
+           
         return "posts/login";
     }
     

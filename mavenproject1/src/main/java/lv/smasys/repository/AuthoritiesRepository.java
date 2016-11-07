@@ -5,14 +5,14 @@
  */
 package lv.smasys.repository;
 
-
-import lv.smasys.model.Student;
+import java.io.Serializable;
+import lv.smasys.model.Authorities;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author student
  */
-public interface StudentRepository extends CrudRepository<Student, Long>{
+public interface AuthoritiesRepository extends CrudRepository<Authorities, String>{
     
 }
