@@ -21,12 +21,12 @@ public class PostController {
     @Autowired
     private PostRepository repository;
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public String listPosts(Model model, Authentication authentication) {       
+     @RequestMapping(value = "teststudent", method = RequestMethod.GET)
+    public String teststudentPosts(Model model, Authentication authentication) {       
        
         model.addAttribute("posts", repository.findAll());
 
-        return "posts/list";
+        return "posts/teststudent";
     }
 
 

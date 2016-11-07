@@ -85,7 +85,7 @@ public class StudentController {
            studentRepository.save(s);
         }
              
-        return new ModelAndView("redirect:/teststudent");
+        return new ModelAndView("redirect:posts/teststudent");
     }
     
     public String getUsername(Authentication aut){

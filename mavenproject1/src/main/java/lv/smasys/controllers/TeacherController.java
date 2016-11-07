@@ -33,7 +33,7 @@ public class TeacherController {
     @Autowired
     LessonRepository lessonRepository;
 
-    @RequestMapping(value = "/testteacher")
+    @RequestMapping(value = "/posts/testteacher")
     public String listCourses(Model model, Authentication authentication) {
         String username = getUsername(authentication);
         List<Teacher> teachers = teacherRepository.findByMail(username);
@@ -49,7 +49,7 @@ public class TeacherController {
         }
 
         //model.addAttribute("courses", courseRepository.findAll());
-        return "testteacher";
+        return "posts/testteacher";
     }
 
     public String getUsername(Authentication aut) {
@@ -60,14 +60,14 @@ public class TeacherController {
         return username;
     }
 
-    @RequestMapping(value = "/new_lesson", method = RequestMethod.GET)
+    @RequestMapping(value = "/newlesson", method = RequestMethod.GET)
     public String newLesson( Authentication authentication) {
-        return "newlesson";
+        return "posts/newlesson";
     }
     
-    @RequestMapping(value = "/new_course", method = RequestMethod.GET)
+    @RequestMapping(value = "/newcourse", method = RequestMethod.GET)
     public String newCourse( Authentication authentication) {
-        return "newcourse";
+        return "posts/newcourse";
     }
     @RequestMapping(value = "/create_lesson", method = RequestMethod.POST)
     public String createLesson(Model model,@RequestParam("title") String title, @RequestParam("crpoints") double crpoints, @RequestParam("description") String description, @RequestParam("courseid") long courseid,@RequestParam("password") String password, Authentication authentication) {
@@ -84,11 +84,11 @@ public class TeacherController {
                 lessonRepository.save(lesson);
             }else{
                 model.addAttribute("message","Wrong Password!");
-                return "newlesson";
+                return "posts/newlesson";
             }
         }
 
-        return "redirect:/testteacher";
+        return "redirect:posts/testteacher";
     }
     
     @RequestMapping(value = "/create_course", method = RequestMethod.POST)
@@ -106,6 +106,6 @@ public class TeacherController {
            courseRepository.save(course);
         }
 
-        return "redirect:/testteacher";
+        return "redirect:posts/testteacher";
     }
 }

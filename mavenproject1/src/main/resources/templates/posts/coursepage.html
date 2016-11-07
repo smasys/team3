@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-<head lang="en">
- 
-    <title>SMaSys</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+               <p class="join_curse"><a class="new_course" href="/success">Cancel</a></p>
+
 <h1><span th:text="${course.title}" /></h1>
 <h2>Curator: <span th:text="${course.teacher.firstname}" /> <span th:text="${course.teacher.lastname}" /></h2>
 <h3>Course Description: <span th:text="${course.description}" /></h3>
@@ -42,5 +37,5 @@
         </tbody>
     </table>
 
-</body>
+</div>
 </html>
