@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head lang="en">
+ 
+    <title>SMaSys</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1><span th:text="${course.title}" /></h1>
+<h2>Curator: <span th:text="${course.teacher.firstname}" /> <span th:text="${course.teacher.lastname}" /></h2>
+<h3>Course Description: <span th:text="${course.description}" /></h3>
+ 
+
+
+
+    <table >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Action</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="student : ${students}">               
+                <td data-th-text="${student.firstname}"></td>
+                <td  data-th-text="${student.lastname}"></td>
+                <td  th:switch="${role}"> 
+                      <p th:case="'ROLE_ADMIN'">User is an administrator</p>
+                      <p th:case="'ROLE_USER'">User is a student</p>
+                      <p th:case="*"></p> 
+                </td>
+            
+            </tr>
+     
+        </tbody>
+    </table>
+
+</body>
+</html>

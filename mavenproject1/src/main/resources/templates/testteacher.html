@@ -41,10 +41,17 @@
             <tbody>
                 <tr data-th-each="lesson : ${lessons}">  
                    
-                    <td data-th-text="${lesson.course.title}"> </td>
-                     <td > <a th:href="@{'/lessons/{id}/show'(id=${lesson.lessonid})}" th:attr="name=${lesson.title}">
+                    <td>
+                    
+                     <a th:href="@{'/course/{id}/show'(id=${lesson.lessonid})}" th:attr="name=${lesson.course.title}">
+                           <span th:text="${lesson.course.title}" />
+                        </a>
+                    </td>
+                     <td> 
+                         <a th:href="@{'/lessons/{id}/show'(id=${lesson.lessonid})}" th:attr="name=${lesson.title}">
                            <span th:text="${lesson.title}" />
-                        </a></td> 
+                        </a>
+                     </td> 
                     
                 </tr>
             </tbody>

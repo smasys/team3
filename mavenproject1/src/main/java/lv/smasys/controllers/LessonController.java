@@ -13,6 +13,8 @@ import lv.smasys.repository.LessonRepository;
 import lv.smasys.repository.StudentRepository;
 import lv.smasys.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,7 +49,7 @@ public class LessonController {
 //    }
 
     @RequestMapping(value = "lessons/{id}/show", method = RequestMethod.GET)
-    public String edit(@PathVariable long id,
+    public String showLesson(@PathVariable long id,
             Model model) {
         Lesson lesson = lessonRepository.findOne(id);
         Course course = lesson.getCourse();
@@ -55,5 +57,25 @@ public class LessonController {
         model.addAttribute("lesson", lesson);
         model.addAttribute("students", course.getStudents());
         return "lessonpage";
+    }
+    //Show Course page 
+    @RequestMapping(value = "course/{id}/show", method = RequestMethod.GET)
+    public String showCourse(@PathVariable long id,
+            Model model, Authentication authentication) {
+       // Lesson lesson = lessonRepository.findOne(id);
+        Course course = courseRepository.findOne(id);
+        
+        model.addAttribute("course", course);
+        model.addAttribute("students", course.getStudents());
+        model.addAttribute("role",getRole(authentication));
+        return "coursepage";
+    }
+    
+     public String getRole(Authentication aut) {
+        String role = "";
+        for (GrantedAuthority authority : aut.getAuthorities()) {
+            role = authority.getAuthority();
+        }
+        return role;
     }
 }
