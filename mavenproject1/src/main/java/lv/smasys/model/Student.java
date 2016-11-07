@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "student")
+@Table(name = "students")
 public class Student implements Serializable {
 
 //Student Id number
@@ -50,19 +50,19 @@ public class Student implements Serializable {
 
     }
 
-    public long getId() {
+    public long getStudentid() {
         return studentid;
     }
 
-    public void setId(long studentid) {
+    public void setStudentid(long studentid) {
         this.studentid = studentid;
     }
 
-    public String getFirsname() {
+    public String getFirstname() {
         return firstname;
     }
 
-    public void setFirsname(String firstname) {
+    public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 

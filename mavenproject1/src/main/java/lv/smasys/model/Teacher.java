@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TEACHERS")
+@Table(name = "teachers")
 public class Teacher implements Serializable {
     //Teacher's ID number
 

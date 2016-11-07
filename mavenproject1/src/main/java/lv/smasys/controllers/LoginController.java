@@ -26,6 +26,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -45,6 +47,7 @@ public class LoginController {
     LessonRepository lessonRepository;
     @Autowired
     CourseRepository courseRepository;
+    private static final Logger log = LoggerFactory.getLogger(LoginController.class);
     
 //    //@RequestMapping("/{userId}/bookmarks")
 //    @RequestMapping(value="/",method=RequestMethod.POST)
@@ -76,6 +79,7 @@ public class LoginController {
             u.setEnabled(true);
             userRepository.save(u);
             authoritiesRepository.save(new Authorities(email,role));
+            log.info("USER '"+name+" "+surname+"' created");
             
         }else if(role.equals("ROLE_ADMIN")){
             teacherRepository.save(new Teacher(name, surname, phone, email, password));
@@ -83,6 +87,7 @@ public class LoginController {
             u.setEnabled(true);
             userRepository.save(u);            
             authoritiesRepository.save(new Authorities(email,role));
+            log.info("ADMIN '"+name+" "+surname+"' created");
         }
         
         return "posts/login";

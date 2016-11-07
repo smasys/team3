@@ -18,6 +18,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -29,9 +31,10 @@ public class TeacherController {
     @Autowired
     TeacherRepository teacherRepository;
     @Autowired
-    CourseRepository courseRepository; 
+    CourseRepository courseRepository;
     @Autowired
     LessonRepository lessonRepository;
+    private static final Logger log = LoggerFactory.getLogger(TeacherController.class);
 
     @RequestMapping(value = "/testteacher")
     public String listCourses(Model model, Authentication authentication) {
@@ -61,49 +64,53 @@ public class TeacherController {
     }
 
     @RequestMapping(value = "/new_lesson", method = RequestMethod.GET)
-    public String newLesson( Authentication authentication) {
+    public String newLesson(Authentication authentication) {
         return "newlesson";
     }
-    
+
     @RequestMapping(value = "/new_course", method = RequestMethod.GET)
-    public String newCourse( Authentication authentication) {
+    public String newCourse(Authentication authentication) {
         return "newcourse";
     }
+
     @RequestMapping(value = "/create_lesson", method = RequestMethod.POST)
-    public String createLesson(Model model,@RequestParam("title") String title, @RequestParam("crpoints") double crpoints, @RequestParam("description") String description, @RequestParam("courseid") long courseid,@RequestParam("password") String password, Authentication authentication) {
+    public String createLesson(Model model, @RequestParam("title") String title, @RequestParam("crpoints") double crpoints, @RequestParam("description") String description, @RequestParam("courseid") long courseid, @RequestParam("password") String password, Authentication authentication) {
 
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
-            Lesson lesson = new Lesson(title, crpoints, t);            
+            Lesson lesson = new Lesson(title, crpoints, t);
             lesson.setCourse(courseRepository.findOne(courseid));
-            if(description!=null){
+            if (description != null) {
                 lesson.setDescription(description);
             }
-            if(courseRepository.findOne(courseid).getPassword().equals(password)){
-                
+            if (courseRepository.findOne(courseid).getPassword().equals(password)) {
+
                 lessonRepository.save(lesson);
-            }else{
-                model.addAttribute("message","Wrong Password!");
+                log.info("Lesson '" + lesson.getTitle() + "' created by " + t.getFirstname() + " " + t.getLastname());
+            } else {
+                model.addAttribute("message", "Wrong Password!");
+                log.error("Can't create new lesson: Wrong Password");
                 return "newlesson";
             }
         }
 
         return "redirect:/testteacher";
     }
-    
+
     @RequestMapping(value = "/create_course", method = RequestMethod.POST)
-    public String createCourse(@RequestParam("title") String title
-            ,@RequestParam("description") String description
-            ,@RequestParam("password") String password
-            , Authentication authentication) {
+    public String createCourse(@RequestParam("title") String title,
+             @RequestParam("description") String description,
+             @RequestParam("password") String password,
+             Authentication authentication) {
 
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
-            Course course =new Course(title);
+            Course course = new Course(title);
             course.setTeacher(t);
             course.setDescription(description);
             course.setPassword(password);
-           courseRepository.save(course);
+            courseRepository.save(course);
+            log.info("Course '" + course.getTitle() + "' created by " + t.getFirstname() + " " + t.getLastname());
         }
 
         return "redirect:/testteacher";

@@ -23,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -39,7 +41,7 @@ public class StudentController {
     LessonRepository lessonRepository;
     @Autowired
     CourseRepository courseRepository;
-    
+    private static final Logger log = LoggerFactory.getLogger(StudentController.class);
     
     @RequestMapping(value = "/teststudent")
     public String listPosts(Model model,Authentication authentication) {  
@@ -63,6 +65,7 @@ public class StudentController {
     public ModelAndView delete(@PathVariable long id) {
         
         studentRepository.delete(id);
+        log.info("Student '"+id+"' deleted");
 
         return new ModelAndView("redirect:/student");
     }
@@ -83,6 +86,7 @@ public class StudentController {
             Course course = courseRepository.findOne(courseid);
             s.setCourse(course);
            studentRepository.save(s);
+           log.info("Student '"+s.getFirstname()+" "+s.getLastname()+"' added to '"+course.getTitle()+"'");
         }
              
         return new ModelAndView("redirect:/teststudent");

@@ -13,11 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 @RequestMapping("/posts")
 public class PostController {
-
+    
+    private static final Logger log = LoggerFactory.getLogger(PostController.class);
     @Autowired
     private PostRepository repository;
 
@@ -33,7 +36,7 @@ public class PostController {
     @RequestMapping(value = "/{id}/delete", method = RequestMethod.GET)
     public ModelAndView delete(@PathVariable long id) {
         repository.delete(id);
-
+        log.info("Post '"+id+"' deleted");
         return new ModelAndView("redirect:/posts");
     }
 
@@ -45,6 +48,7 @@ public class PostController {
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView create(@RequestParam("message") String comment) {
         repository.save(new Post(comment));
+        log.info("Post created");
         return new ModelAndView("redirect:/posts");
     }
 
@@ -54,6 +58,7 @@ public class PostController {
         Post post = repository.findOne(id);
         post.setMessage(message);
         repository.save(post);
+        log.info("Post '"+id+"' updated");
         return new ModelAndView("redirect:/posts");
     }
 
@@ -62,6 +67,7 @@ public class PostController {
             Model model) {
         Post post = repository.findOne(id);
         model.addAttribute("post", post);
+        log.info("Post '"+id+"' edited");
         return "posts/edit";
     }
 

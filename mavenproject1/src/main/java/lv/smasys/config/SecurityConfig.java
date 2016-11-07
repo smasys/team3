@@ -16,6 +16,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -23,27 +25,33 @@ import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
  */
 @Configuration
 @EnableWebSecurity
+
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    private static final Logger log = LoggerFactory.getLogger(SecurityConfig.class);
     @Autowired
     DataSource dataSource;
 
     @Autowired
     public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication().dataSource(dataSource)
-                .usersByUsernameQuery(
-                        "select username,password, enabled from users where username=?")
-                        
-                .authoritiesByUsernameQuery(
-                        "select username, authority from authorities where username=?");
-                       
+        try {
+            auth.jdbcAuthentication().dataSource(dataSource)
+                    .usersByUsernameQuery(
+                            "select username,password, enabled from users where username=?")
+                    .authoritiesByUsernameQuery(
+                            "select username, authority from authorities where username=?");
+            log.info("Config authentication complete");
+        } catch (Exception e) {
+            log.error("Unable to config authentication to '" + auth + "': " + e.getMessage());
+        }
+
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        
+        try{
         http
-                .authorizeRequests().antMatchers("/createuser","/create_user").permitAll()
+                .authorizeRequests().antMatchers("/createuser", "/create_user").permitAll()
                 .anyRequest().authenticated();
         http.formLogin()
                 .loginPage("/")
@@ -53,6 +61,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf()
                 .csrfTokenRepository(csrfTokenRepository());
+           log.info("http security configuration complete");
+        } catch (Exception e) {
+            log.error("Unable to config http security  '" + http + "': " + e.getMessage());
+        }
 
     }
 
