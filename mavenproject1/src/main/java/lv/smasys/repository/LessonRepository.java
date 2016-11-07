@@ -10,7 +10,7 @@ import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author student
+ * @author USER
  */
 public interface LessonRepository extends CrudRepository<Lesson, Long>{
     

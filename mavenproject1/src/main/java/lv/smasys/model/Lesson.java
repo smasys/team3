@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "LESSONS")
+@Table(name = "lesson")
 public class Lesson implements Serializable {
     //Lesson ID #
 
@@ -21,19 +21,21 @@ public class Lesson implements Serializable {
     private double crpoints;
 
     @ManyToOne
-    @JoinColumn(name = "courseid",
+    @JoinColumn(name="courseid",referencedColumnName="courseid",
             nullable = true)
     private Course course;
 
-    @OneToOne
-    @JoinColumn(name = "teacherid", 
+    @ManyToOne
+    @JoinColumn(name = "teacherid", referencedColumnName="teacherid",
             nullable = true)
     private Teacher teacher;
     
     @OneToMany(cascade = {CascadeType.ALL})
     @JoinColumn(name = "lessonid")
     private List<Grade> grades;
-
+    @Column(name = "description")
+    private String description;
+   
     public Lesson() {
     }
 
@@ -43,11 +45,11 @@ public class Lesson implements Serializable {
         this.teacher = teacher;
     }
 
-    public int getLessonId() {
+    public int getLessonid() {
         return lessonid;
     }
 
-    public void setLessonId(int lessonid) {
+    public void setLessonid(int lessonid) {
         this.lessonid = lessonid;
     }
 
@@ -59,11 +61,11 @@ public class Lesson implements Serializable {
         this.title = title;
     }
 
-    public double getCrPoint() {
+    public double getCrpoints() {
         return crpoints;
     }
 
-    public void setCrPoint(double crpoints) {
+    public void setCrpoints(double crpoints) {
         this.crpoints = crpoints;
     }
 
@@ -77,6 +79,14 @@ public class Lesson implements Serializable {
 
     public Teacher getTeacher() {
         return teacher;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setTeacher(Teacher teacher) {

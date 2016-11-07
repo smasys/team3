@@ -1,6 +1,7 @@
 package lv.smasys.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
@@ -25,8 +26,10 @@ public class Teacher implements Serializable {
     //Teachers e-Mail Address
     @Column(name = "mail")
     private String mail;
-    @OneToOne(mappedBy = "teacher")
-    private Lesson lesson;
+    @OneToMany(mappedBy="teacher",targetEntity=Lesson.class,cascade = {CascadeType.ALL})
+    private List<Lesson> lessons;
+    @OneToMany(mappedBy="teacher",targetEntity=Course.class,cascade = {CascadeType.ALL})
+    private List<Course> courses;
 
     public Teacher() {
     }
@@ -39,27 +42,45 @@ public class Teacher implements Serializable {
         this.password = password;
     }
 
-    public int getId() {
+    public int getTeacherid() {
         return teacherid;
     }
 
-    public void setId(int id) {
-        this.teacherid = id;
+    public void setTeacherid(int teacherid) {
+        this.teacherid = teacherid;
     }
 
-    public String getFname() {
+  
+
+    public String getFirstname() {
         return firstname;
     }
 
-    public void setFname(String firstname) {
+    public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
-    public String getLname() {
+    public String getLastname() {
         return lastname;
     }
 
-    public void setLname(String lastname) {
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
+    public void setLessons(List<Lesson> lessons) {
+        this.lessons = lessons;
+    }
+
+    public void setLastname(String lastname) {
         this.lastname = lastname;
     }
 
@@ -79,13 +100,7 @@ public class Teacher implements Serializable {
         this.mail = mail;
     }
 
-    public Lesson getLesson() {
-        return lesson;
-    }
-
-    public void setLesson(Lesson lesson) {
-        this.lesson = lesson;
-    }
+  
 
     public String getPassword() {
         return password;

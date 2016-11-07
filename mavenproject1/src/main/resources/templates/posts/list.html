@@ -2,38 +2,36 @@
 
 <div layout:fragment="content">
 
-    <a class="btn btn-primary" href="/posts/new">Add new post</a>
+<div class="container">
+    <p class="join_curse"><a class="new_course" href="/posts/new">Add course</a></p>
 
-    <table class="table table-striped" id="posts_list">
+    <table class="courses">
         <thead>
         <tr>
-            <th>Comments</th>
+            <th>Courses</th>
             <th>Action</th>
-            <th></th>
+            
         </tr>
         </thead>
-        <tbody>
+        <tbody class="course_list">
         <tr data-th-each="post : ${posts}">
             <td class="message" data-th-text="${post.message}"></td>
 
-            <td>
-                <a th:href="@{'/posts/{id}/delete'(id=${post.id})}" class="delete" th:attr="name=${post.message}">
-                        <span class="fa-stack">
-                            <i class="glyphicon glyphicon-trash"></i>
-                        </span>
+            <td class="buttons">
+                <a th:href="@{'/posts/{id}/edit'(id=${post.id})}" class="btn btn-warning btn-sm" th:attr="name=${post.message}">
+                        Edit
+                </a>
+                <a th:href="@{'/posts/{id}/delete'(id=${post.id})}" class="btn btn-danger btn-sm" th:attr="name=${post.message}">
+                    X
                 </a>
             </td>
-
-            <td>
-                <a th:href="@{'/posts/{id}/edit'(id=${post.id})}" class="edit" th:attr="name=${post.message}">
-                    <span class="fa-stack">
-                        <i class="glyphicon glyphicon-edit"></i>
-                    </span>
-
-                </a>
+        </tr>
+                <tr>
+            <td colspan="2" class="end">
             </td>
         </tr>
         </tbody>
     </table>
+</div>
 </div>
 </html>

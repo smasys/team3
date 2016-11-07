@@ -5,13 +5,12 @@
  */
 package lv.smasys.repository;
 
-import java.io.Serializable;
 import lv.smasys.model.Authorities;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author student
+ * @author USER
  */
 public interface AuthoritiesRepository extends CrudRepository<Authorities, String>{
     

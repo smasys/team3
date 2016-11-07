@@ -21,6 +21,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter{
         
         registry.addViewController("/posts/login").setViewName("login");
         registry.addViewController("/posts/list").setViewName("posts");
+        registry.addViewController("/teststudent").setViewName("student");
         
 
        // registry.addViewController("/posts/login").setViewName("login"); 

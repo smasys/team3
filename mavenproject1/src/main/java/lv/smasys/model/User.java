@@ -17,13 +17,26 @@ public class User implements Serializable {
 
     @Column(name = "password")
     private String password;
+    
+    @Column(name = "enabled" ,columnDefinition="tinyint(1) default 1")
+    private boolean enabled;
+
 
     public User() {
+       
     }
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        
+    }
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
     public String getUsername() {

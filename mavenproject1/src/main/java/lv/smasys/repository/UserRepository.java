@@ -5,11 +5,12 @@
  */
 package lv.smasys.repository;
 
-import org.springframework.data.repository.CrudRepository;
 import lv.smasys.model.User;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
- * @author student
+ * @author USER
  */
 public interface UserRepository extends CrudRepository<User, String>{
     

@@ -48,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin()
                 .loginPage("/")
                 .usernameParameter("username").passwordParameter("password")
-                .defaultSuccessUrl("/posts")
+                .defaultSuccessUrl("/success")
                 .permitAll();
 
         http.csrf()

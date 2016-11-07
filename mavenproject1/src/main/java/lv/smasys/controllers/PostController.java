@@ -1,7 +1,7 @@
 package lv.smasys.controllers;
 
 import lv.smasys.model.Post;
-import lv.smasys.model.PostRepository;
+import lv.smasys.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -22,22 +22,13 @@ public class PostController {
     private PostRepository repository;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String listPosts(Model model, Authentication authentication) {
-        String role="";
-        String name="";
-        for (GrantedAuthority authority : authentication.getAuthorities()) {
-            role = authority.getAuthority();
-            name = authentication.getName()+role;
-        }
-        if(role.equals("ROLE_USER")){
-            model.addAttribute("user",new Post(name+" student"));
-            return "teststudent";
-        }
-        repository.save(new Post(name));
+    public String listPosts(Model model, Authentication authentication) {       
+       
         model.addAttribute("posts", repository.findAll());
 
         return "posts/list";
     }
+
 
     @RequestMapping(value = "/{id}/delete", method = RequestMethod.GET)
     public ModelAndView delete(@PathVariable long id) {
