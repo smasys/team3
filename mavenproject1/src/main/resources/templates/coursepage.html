@@ -28,7 +28,11 @@
                 <td data-th-text="${student.firstname}"></td>
                 <td  data-th-text="${student.lastname}"></td>
                 <td  th:switch="${role}"> 
-                      <p th:case="'ROLE_ADMIN'">User is an administrator</p>
+                      <p th:case="'ROLE_ADMIN'">
+                         <a th:href="@{'/course/{id}/delete'(id=${student.studentid})}" th:attr="name=${student.studentid}">
+                            X
+                        </a>
+                      </p>
                       <p th:case="'ROLE_USER'">User is a student</p>
                       <p th:case="*"></p> 
                 </td>

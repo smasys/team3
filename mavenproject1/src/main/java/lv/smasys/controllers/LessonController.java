@@ -8,6 +8,7 @@ package lv.smasys.controllers;
 import lv.smasys.model.Course;
 import lv.smasys.model.Lesson;
 import lv.smasys.model.Post;
+import lv.smasys.model.Student;
 import lv.smasys.repository.CourseRepository;
 import lv.smasys.repository.LessonRepository;
 import lv.smasys.repository.StudentRepository;
@@ -69,6 +70,17 @@ public class LessonController {
         model.addAttribute("students", course.getStudents());
         model.addAttribute("role",getRole(authentication));
         return "coursepage";
+    }
+    //Remove Student from course
+    @RequestMapping(value = "/course/{id}/delete", method = RequestMethod.GET)
+    public ModelAndView delete(@PathVariable long id) {
+        Student s = studentRepository.findOne(id);
+        long ids=s.getCourse().getCourseid();
+        s.setCourse(null);
+        
+        studentRepository.save(s);
+
+        return new ModelAndView("redirect:/course/"+ids+"/show");
     }
     
      public String getRole(Authentication aut) {

@@ -43,7 +43,7 @@
                    
                     <td>
                     
-                     <a th:href="@{'/course/{id}/show'(id=${lesson.lessonid})}" th:attr="name=${lesson.course.title}">
+                     <a th:href="@{'/course/{id}/show'(id=${lesson.course.courseid})}" th:attr="name=${lesson.course.title}">
                            <span th:text="${lesson.course.title}" />
                         </a>
                     </td>
