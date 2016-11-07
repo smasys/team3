@@ -11,10 +11,10 @@
 
         <h2>Create New Course or a New Lesson</h2><br/>
 
-        
+
         <a href="/new_course"> <button type="button">Create Course</button></a>
         <a href="/new_lesson"> <button type="button">Create Lesson</button></a>
-      
+
 
         <table>
             <thead>
@@ -30,8 +30,8 @@
                 </tr>
             </tbody>
         </table>
-        
-         <table>
+
+        <table>
             <thead>
                 <tr>
                     <th>Course Name</th>
@@ -39,9 +39,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-th-each="lesson : ${lessons}">               
+                <tr data-th-each="lesson : ${lessons}">  
+                   
                     <td data-th-text="${lesson.course.title}"> </td>
-                    <td  data-th-text="${lesson.title}"></td>
+                     <td > <a th:href="@{'/lessons/{id}/show'(id=${lesson.lessonid})}" th:attr="name=${lesson.title}">
+                           <span th:text="${lesson.title}" />
+                        </a></td> 
+                    
                 </tr>
             </tbody>
         </table>
