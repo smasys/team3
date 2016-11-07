@@ -5,8 +5,11 @@
  */
 package lv.smasys.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
 import lv.smasys.model.Authorities;
 import lv.smasys.model.Post;
+import lv.smasys.model.Roles;
 import lv.smasys.model.Student;
 import lv.smasys.model.Teacher;
 import lv.smasys.model.User;
@@ -60,7 +63,11 @@ public class LoginController {
         return "posts/login";
     }
     @RequestMapping(value="/createuser",method=RequestMethod.GET)
-    public String newUser() {
+    public String newUser(Model model) {
+        List<Roles> list = new ArrayList<Roles>();
+        list.add(new Roles("ROLE_USER"));
+        list.add(new Roles("ROLE_ADMIN"));
+        model.addAttribute("userroles",list);
         return "createuser";
     }
     
@@ -71,7 +78,7 @@ public class LoginController {
             ,@RequestParam("phone") String phone
             ,@RequestParam("email") String email
             ,@RequestParam("password") String password
-            ,@RequestParam("role") String role) {
+            ,@RequestParam("roles") String role) {
         
         if(role.equals("ROLE_USER")){
             studentRepository.save(new Student(name, surname, phone, email, password));
@@ -104,8 +111,10 @@ public class LoginController {
         if(role.equals("ROLE_USER")){  
             model.addAttribute("courses", courseRepository.findAll());
             return "redirect:/teststudent";
-        }    
-        return "redirect:/testteacher";
+        }else if(role.equals("ROLE_ADMIN")){
+            return "redirect:/testteacher";
+        }   
+        return "redirect:/?logout";
     }
     
     
