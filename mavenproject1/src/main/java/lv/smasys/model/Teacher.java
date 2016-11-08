@@ -12,7 +12,7 @@ public class Teacher implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "teacherid")
-    private int teacherid;
+    private Long teacherid;
     //Teacher's First Name
     @Column(name = "firstname")
     private String firstname;
@@ -42,11 +42,11 @@ public class Teacher implements Serializable {
         this.password = password;
     }
 
-    public int getTeacherid() {
+    public Long getTeacherid() {
         return teacherid;
     }
 
-    public void setTeacherid(int teacherid) {
+    public void setTeacherid(Long teacherid) {
         this.teacherid = teacherid;
     }
 

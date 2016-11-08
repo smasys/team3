@@ -9,11 +9,15 @@ import java.util.List;
 import lv.smasys.model.Post;
 import lv.smasys.model.Student;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author student
  */
+@Repository
+@Component
 public interface StudentRepository extends CrudRepository<Student, Long>{
     List<Student> findByMail(String mail);
 }
