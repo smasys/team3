@@ -1,19 +1,17 @@
 <html layout:decorator="layout">
     <div layout:fragment="content">
-<h1>Hello</h1>
- 
-<h2>Fellow <!--<span th:text="${user.message}" />-->!!!</h2>
 
 <form method="post" name="comment_form" id="comment_form" th:action="@{/student/join_course}" >
-                <label for="courseid">Course ID</label>                
+        <br />       
+    <label for="courseid">Course ID</label>            
                 <input type="text" 
                        name="courseid" /> <br/>
               
                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-            <button type="submit" id="submit" class="btn btn-primary">Join</button>
+            <button type="submit" id="submit" class="login_form">Join</button>
 </form>
 
-    <table >
+    <table class="courses">
         <thead>
         <tr>
             <th>Teacher</th>

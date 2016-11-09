@@ -43,7 +43,7 @@ public class StudentController {
     CourseRepository courseRepository;
     private static final Logger log = LoggerFactory.getLogger(StudentController.class);
     
-    @RequestMapping(value = "/teststudent")
+    @RequestMapping(value = "/posts/teststudent")
     public String listPosts(Model model,Authentication authentication) {  
         String username = getUsername(authentication);
         List<Student> students =studentRepository.findByMail(username);        
@@ -58,7 +58,7 @@ public class StudentController {
         }
         
         //model.addAttribute("courses", courseRepository.findAll());
-        return "teststudent";
+        return "posts/teststudent";
     }
     
     @RequestMapping(value = "/{id}/delete", method = RequestMethod.GET)
@@ -89,7 +89,7 @@ public class StudentController {
            log.info("Student '"+s.getFirstname()+" "+s.getLastname()+"' added to '"+course.getTitle()+"'");
         }
              
-        return new ModelAndView("redirect:posts/teststudent");
+        return new ModelAndView("redirect:/posts/teststudent");
     }
     
     public String getUsername(Authentication aut){
