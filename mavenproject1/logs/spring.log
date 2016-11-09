@@ -2635,3 +2635,844 @@ java.lang.NullPointerException: null
 2016-11-09 10:30:56.279  INFO 32541 --- [Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 10:22:51 EET 2016]; root of context hierarchy
 2016-11-09 10:30:56.282  INFO 32541 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 2016-11-09 10:30:56.289  INFO 32541 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 10:47:55.996  INFO 378 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 378 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 10:47:55.999  INFO 378 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 10:47:56.467  INFO 378 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 10:47:56 EET 2016]; root of context hierarchy
+2016-11-09 10:47:58.672  INFO 378 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 10:47:58.682  INFO 378 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:47:58.756  INFO 378 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 10:47:58.781  INFO 378 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 10:47:58.905  INFO 378 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 10:47:58.909  INFO 378 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 10:47:58.912  INFO 378 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 10:47:59.007  INFO 378 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 10:47:59.810  INFO 378 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 10:48:00.377  WARN 378 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): lv.smasys.model.Grade
+2016-11-09 10:48:00.377  WARN 378 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): lv.smasys.model.Grade
+2016-11-09 10:48:01.188  INFO 378 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 10:48:01.650  INFO 378 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 10:48:01.658  INFO 378 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:48:01.662  INFO 378 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [class lv.smasys.config.DatabaseConfig$$EnhancerBySpringCGLIB$$bcc2967a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:48:01.783  INFO 378 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89d97470] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:48:02.432  INFO 378 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-09 10:48:02.459  INFO 378 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-09 10:48:02.461  INFO 378 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-11-09 10:48:02.633  INFO 378 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-09 10:48:02.634  INFO 378 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6174 ms
+2016-11-09 10:48:02.961  INFO 378 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-09 10:48:02.962  INFO 378 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-09 10:48:02.963  INFO 378 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-09 10:48:02.963  INFO 378 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-09 10:48:02.965  INFO 378 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-09 10:48:02.965  INFO 378 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-09 10:48:03.719  INFO 378 --- [main] lv.smasys.config.SecurityConfig          : Config authentication complete
+2016-11-09 10:48:04.155  INFO 378 --- [main] lv.smasys.config.SecurityConfig          : http security configuration complete
+2016-11-09 10:48:04.158  INFO 378 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-11-09 10:48:04.159  INFO 378 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/fonts/**'], []
+2016-11-09 10:48:04.159  INFO 378 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/libs/**'], []
+2016-11-09 10:48:04.312  INFO 378 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@285bf5ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@243c4346, org.springframework.security.web.header.HeaderWriterFilter@2c678c7b, org.springframework.security.web.csrf.CsrfFilter@15f2a43f, org.springframework.security.web.authentication.logout.LogoutFilter@218df7d6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@559fd5ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3dfe59d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@165d1d54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3739f3c9, org.springframework.security.web.session.SessionManagementFilter@30c7be6f, org.springframework.security.web.access.ExceptionTranslationFilter@7afb9c93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d84e363]
+2016-11-09 10:48:04.475  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 10:47:56 EET 2016]; root of context hierarchy
+2016-11-09 10:48:04.577  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lessons/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showLesson(long,org.springframework.ui.Model)
+2016-11-09 10:48:04.579  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showCourse(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.579  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.LessonController.delete(long)
+2016-11-09 10:48:04.580  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/createuser],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.newUser(org.springframework.ui.Model)
+2016-11-09 10:48:04.581  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/success],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.581  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.index()
+2016-11-09 10:48:04.582  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_user],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.LoginController.create(org.springframework.ui.Model,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-11-09 10:48:04.587  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.teststudentPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.588  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/new],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.newProject()
+2016-11-09 10:48:04.589  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/edit],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.edit(long,org.springframework.ui.Model)
+2016-11-09 10:48:04.589  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.update(long,java.lang.String)
+2016-11-09 10:48:04.590  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.delete(long)
+2016-11-09 10:48:04.590  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/create],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.create(java.lang.String)
+2016-11-09 10:48:04.591  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/info]}" onto public java.lang.String lv.smasys.controllers.PostController.userInfo(org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.595  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent]}" onto public java.lang.String lv.smasys.controllers.StudentController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.596  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.delete(long)
+2016-11-09 10:48:04.596  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/join_course],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.create(long,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.598  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/testteacher]}" onto public java.lang.String lv.smasys.controllers.TeacherController.listCourses(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.599  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newlesson],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newLesson(org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.600  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newcourse],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newCourse(org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.600  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_lesson],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createLesson(org.springframework.ui.Model,java.lang.String,double,java.lang.String,long,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.601  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_course],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createCourse(java.lang.String,java.lang.String,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 10:48:04.604  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-09 10:48:04.606  INFO 378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-09 10:48:04.628  INFO 378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 10:48:04.629  INFO 378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/list] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 10:48:04.629  INFO 378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/teststudent] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 10:48:04.648  INFO 378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 10:48:04.648  INFO 378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 10:48:04.711  INFO 378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 10:48:05.515  INFO 378 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-09 10:48:05.589  INFO 378 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-09 10:48:05.598  INFO 378 --- [main] lv.smasys.Application                    : Started Application in 10.212 seconds (JVM running for 10.739)
+2016-11-09 10:48:24.762  INFO 378 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-09 10:48:24.764  INFO 378 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-09 10:48:24.791  INFO 378 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2016-11-09 10:48:31.594  INFO 378 --- [http-nio-8080-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-11-09 10:48:35.576  INFO 378 --- [http-nio-8080-exec-7] lv.smasys.controllers.StudentController  : Student 'Tim TImson' added to 'IT'
+2016-11-09 10:48:37.527  WARN 378 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type [java.lang.String] to required type [long]; nested exception is java.lang.NumberFormatException: For input string: ""
+2016-11-09 10:48:41.493  INFO 378 --- [http-nio-8080-exec-1] lv.smasys.controllers.StudentController  : Student 'Tim TImson' added to 'IT'
+2016-11-09 10:48:58.287  INFO 378 --- [http-nio-8080-exec-4] lv.smasys.controllers.StudentController  : Student 'Tim TImson' added to 'IT'
+2016-11-09 10:49:05.583  INFO 378 --- [http-nio-8080-exec-7] lv.smasys.controllers.StudentController  : Student 'Tim TImson' added to 'IT'
+2016-11-09 10:49:54.953  INFO 378 --- [http-nio-8080-exec-10] lv.smasys.controllers.StudentController  : Student 'Tim TImson' added to 'IT'
+2016-11-09 10:55:42.314  INFO 378 --- [Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 10:47:56 EET 2016]; root of context hierarchy
+2016-11-09 10:55:42.318  INFO 378 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-09 10:55:42.324  INFO 378 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 10:55:55.661  INFO 526 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 526 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 10:55:55.665  INFO 526 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 10:55:56.168  INFO 526 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 10:55:56 EET 2016]; root of context hierarchy
+2016-11-09 10:55:58.556  INFO 526 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 10:55:58.566  INFO 526 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:55:58.641  INFO 526 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 10:55:58.670  INFO 526 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 10:55:58.789  INFO 526 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 10:55:58.791  INFO 526 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 10:55:58.794  INFO 526 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 10:55:58.851  INFO 526 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 10:56:00.035  INFO 526 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 10:56:00.487  WARN 526 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): lv.smasys.model.Grade
+2016-11-09 10:56:00.487  WARN 526 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): lv.smasys.model.Grade
+2016-11-09 10:56:01.187  INFO 526 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 10:56:01.589  INFO 526 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 10:56:01.595  INFO 526 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:56:01.598  INFO 526 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [class lv.smasys.config.DatabaseConfig$$EnhancerBySpringCGLIB$$f56aaf3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:56:01.715  INFO 526 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2818d30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 10:56:02.227  INFO 526 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-09 10:56:02.248  INFO 526 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-09 10:56:02.250  INFO 526 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-11-09 10:56:02.395  INFO 526 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-09 10:56:02.396  INFO 526 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6233 ms
+2016-11-09 10:56:02.728  INFO 526 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-09 10:56:02.729  INFO 526 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-09 10:56:02.730  INFO 526 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-09 10:56:02.731  INFO 526 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-09 10:56:02.734  INFO 526 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-09 10:56:02.735  INFO 526 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-09 10:56:03.848  INFO 526 --- [main] lv.smasys.config.SecurityConfig          : Config authentication complete
+2016-11-09 10:56:04.348  INFO 526 --- [main] lv.smasys.config.SecurityConfig          : http security configuration complete
+2016-11-09 10:56:04.352  INFO 526 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-11-09 10:56:04.352  INFO 526 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/fonts/**'], []
+2016-11-09 10:56:04.352  INFO 526 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/libs/**'], []
+2016-11-09 10:56:04.502  INFO 526 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bb12f41, org.springframework.security.web.context.SecurityContextPersistenceFilter@a5e8260, org.springframework.security.web.header.HeaderWriterFilter@5df64b2a, org.springframework.security.web.csrf.CsrfFilter@52b32b70, org.springframework.security.web.authentication.logout.LogoutFilter@4be12f6c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c6379c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a9bce99, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3dfe59d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@708dfe10, org.springframework.security.web.session.SessionManagementFilter@30d15e4a, org.springframework.security.web.access.ExceptionTranslationFilter@485deee1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@563172d3]
+2016-11-09 10:56:04.692  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 10:55:56 EET 2016]; root of context hierarchy
+2016-11-09 10:56:04.795  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lessons/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showLesson(long,org.springframework.ui.Model)
+2016-11-09 10:56:04.797  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showCourse(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.797  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.LessonController.delete(long)
+2016-11-09 10:56:04.798  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/createuser],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.newUser(org.springframework.ui.Model)
+2016-11-09 10:56:04.799  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/success],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.799  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.index()
+2016-11-09 10:56:04.800  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_user],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.LoginController.create(org.springframework.ui.Model,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-11-09 10:56:04.805  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/new],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.newProject()
+2016-11-09 10:56:04.806  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/edit],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.edit(long,org.springframework.ui.Model)
+2016-11-09 10:56:04.806  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.update(long,java.lang.String)
+2016-11-09 10:56:04.806  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.delete(long)
+2016-11-09 10:56:04.807  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/create],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.create(java.lang.String)
+2016-11-09 10:56:04.807  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/info]}" onto public java.lang.String lv.smasys.controllers.PostController.userInfo(org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.810  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent]}" onto public java.lang.String lv.smasys.controllers.StudentController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.811  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.delete(long)
+2016-11-09 10:56:04.812  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/join_course],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.create(long,org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.813  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/testteacher]}" onto public java.lang.String lv.smasys.controllers.TeacherController.listCourses(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.814  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newlesson],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newLesson(org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.814  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newcourse],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newCourse(org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.815  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_lesson],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createLesson(org.springframework.ui.Model,java.lang.String,double,java.lang.String,long,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.815  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_course],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createCourse(java.lang.String,java.lang.String,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 10:56:04.819  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-09 10:56:04.820  INFO 526 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-09 10:56:04.845  INFO 526 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 10:56:04.845  INFO 526 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/list] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 10:56:04.846  INFO 526 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/teststudent] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 10:56:04.863  INFO 526 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 10:56:04.864  INFO 526 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 10:56:04.937  INFO 526 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 10:56:05.997  INFO 526 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-09 10:56:06.089  INFO 526 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-09 10:56:06.098  INFO 526 --- [main] lv.smasys.Application                    : Started Application in 11.121 seconds (JVM running for 11.853)
+2016-11-09 10:56:19.837  INFO 526 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-09 10:56:19.838  INFO 526 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-09 10:56:19.863  INFO 526 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2016-11-09 10:56:31.768  INFO 526 --- [http-nio-8080-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-11-09 10:56:37.497  INFO 526 --- [http-nio-8080-exec-7] lv.smasys.controllers.StudentController  : Student 'Tim TImson' added to 'IT'
+2016-11-09 11:27:18.796  INFO 526 --- [Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 10:55:56 EET 2016]; root of context hierarchy
+2016-11-09 11:27:18.800  INFO 526 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-09 11:27:18.809  INFO 526 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:33:48.511  INFO 829 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 829 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 11:33:48.513  INFO 829 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 11:33:48.973  INFO 829 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:33:48 EET 2016]; root of context hierarchy
+2016-11-09 11:33:51.309  INFO 829 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 11:33:51.320  INFO 829 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:33:51.414  INFO 829 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:33:51.445  INFO 829 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 11:33:51.578  INFO 829 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 11:33:51.581  INFO 829 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 11:33:51.584  INFO 829 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 11:33:51.654  INFO 829 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 11:33:52.459  INFO 829 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 11:33:53.821  INFO 829 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 11:33:55.677  WARN 829 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfig': Unsatisfied dependency expressed through field 'entityManagerFactory': Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2016-11-09 11:33:55.695 ERROR 829 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfig': Unsatisfied dependency expressed through field 'entityManagerFactory': Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:569) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:349) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:228) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:697) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:526) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at lv.smasys.Application.main(Application.java:22) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1019) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:566) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 28 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 39 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to execute schema management to JDBC target [alter table grades add constraint FKokple39k7yy5b5unfvf6q698m foreign key (grade) references students (studentid)]
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.accept(TargetDatabaseImpl.java:59) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applySqlString(SchemaMigratorImpl.java:431) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applySqlStrings(SchemaMigratorImpl.java:420) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applyForeignKeys(SchemaMigratorImpl.java:386) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigrationToTargets(SchemaMigratorImpl.java:214) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:60) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:470) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	... 45 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1540) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2595) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1468) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.accept(TargetDatabaseImpl.java:56) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	... 55 common frames omitted
+
+2016-11-09 11:35:42.275  INFO 893 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 893 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 11:35:42.278  INFO 893 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 11:35:42.815  INFO 893 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:35:42 EET 2016]; root of context hierarchy
+2016-11-09 11:35:45.180  INFO 893 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 11:35:45.192  INFO 893 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:35:45.340  INFO 893 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:35:45.385  INFO 893 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 11:35:45.554  INFO 893 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 11:35:45.557  INFO 893 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 11:35:45.560  INFO 893 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 11:35:45.628  INFO 893 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 11:35:46.273  INFO 893 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 11:35:47.598  INFO 893 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 11:35:48.475  WARN 893 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfig': Unsatisfied dependency expressed through field 'entityManagerFactory': Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2016-11-09 11:35:48.499 ERROR 893 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfig': Unsatisfied dependency expressed through field 'entityManagerFactory': Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:569) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:349) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:228) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:697) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:526) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at lv.smasys.Application.main(Application.java:22) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1019) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:566) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 28 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 39 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to execute schema management to JDBC target [alter table grades add constraint FKokple39k7yy5b5unfvf6q698m foreign key (grade) references students (studentid)]
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.accept(TargetDatabaseImpl.java:59) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applySqlString(SchemaMigratorImpl.java:431) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applySqlStrings(SchemaMigratorImpl.java:420) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applyForeignKeys(SchemaMigratorImpl.java:386) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigrationToTargets(SchemaMigratorImpl.java:214) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:60) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:470) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	... 45 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1540) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2595) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1468) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.accept(TargetDatabaseImpl.java:56) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	... 55 common frames omitted
+
+2016-11-09 11:37:36.118  INFO 960 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 960 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 11:37:36.121  INFO 960 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 11:37:36.571  INFO 960 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:37:36 EET 2016]; root of context hierarchy
+2016-11-09 11:37:38.904  INFO 960 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 11:37:38.915  INFO 960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:37:39.043  INFO 960 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:37:39.083  INFO 960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 11:37:39.245  INFO 960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 11:37:39.248  INFO 960 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 11:37:39.251  INFO 960 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 11:37:39.336  INFO 960 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 11:37:40.163  INFO 960 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 11:37:41.497  INFO 960 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 11:37:41.675  INFO 960 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: grades
+2016-11-09 11:37:41.676  INFO 960 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: grades
+2016-11-09 11:37:44.924  WARN 960 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfig': Unsatisfied dependency expressed through field 'entityManagerFactory': Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2016-11-09 11:37:44.938 ERROR 960 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfig': Unsatisfied dependency expressed through field 'entityManagerFactory': Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:569) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:349) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:228) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:697) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:526) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at lv.smasys.Application.main(Application.java:22) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [lv/smasys/config/DatabaseConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1019) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:566) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 28 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362) ~[spring-orm-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 39 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Unable to execute schema management to JDBC target [alter table grades add constraint FKokple39k7yy5b5unfvf6q698m foreign key (grade) references students (studentid)]
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.accept(TargetDatabaseImpl.java:59) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applySqlString(SchemaMigratorImpl.java:431) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applySqlStrings(SchemaMigratorImpl.java:420) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.applyForeignKeys(SchemaMigratorImpl.java:386) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigrationToTargets(SchemaMigratorImpl.java:214) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:60) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:134) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:470) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	... 45 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1540) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2595) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1468) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at org.hibernate.tool.schema.internal.TargetDatabaseImpl.accept(TargetDatabaseImpl.java:56) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	... 55 common frames omitted
+
+2016-11-09 11:40:17.702  INFO 1033 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 1033 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 11:40:17.706  INFO 1033 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 11:40:18.222  INFO 1033 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:40:18 EET 2016]; root of context hierarchy
+2016-11-09 11:40:20.660  INFO 1033 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 11:40:20.671  INFO 1033 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:40:20.770  INFO 1033 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:40:20.808  INFO 1033 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 11:40:20.989  INFO 1033 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 11:40:20.992  INFO 1033 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 11:40:20.996  INFO 1033 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 11:40:21.075  INFO 1033 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 11:40:21.697  INFO 1033 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 11:40:23.120  INFO 1033 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 11:40:23.576  INFO 1033 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:40:23.587  INFO 1033 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:40:23.592  INFO 1033 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [class lv.smasys.config.DatabaseConfig$$EnhancerBySpringCGLIB$$168197ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:40:23.740  INFO 1033 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e39875a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:40:24.274  INFO 1033 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-09 11:40:24.301  INFO 1033 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-09 11:40:24.303  INFO 1033 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-11-09 11:40:24.458  INFO 1033 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-09 11:40:24.459  INFO 1033 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6248 ms
+2016-11-09 11:40:24.786  INFO 1033 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-09 11:40:24.787  INFO 1033 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-09 11:40:24.787  INFO 1033 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-09 11:40:24.788  INFO 1033 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-09 11:40:24.789  INFO 1033 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-09 11:40:24.790  INFO 1033 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-09 11:40:25.652  INFO 1033 --- [main] lv.smasys.config.SecurityConfig          : Config authentication complete
+2016-11-09 11:40:26.092  INFO 1033 --- [main] lv.smasys.config.SecurityConfig          : http security configuration complete
+2016-11-09 11:40:26.095  INFO 1033 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-11-09 11:40:26.096  INFO 1033 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/fonts/**'], []
+2016-11-09 11:40:26.096  INFO 1033 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/libs/**'], []
+2016-11-09 11:40:26.239  INFO 1033 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79604abe, org.springframework.security.web.context.SecurityContextPersistenceFilter@156cfa20, org.springframework.security.web.header.HeaderWriterFilter@48368a08, org.springframework.security.web.csrf.CsrfFilter@5635bcd2, org.springframework.security.web.authentication.logout.LogoutFilter@21f50d2c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1fee4278, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23396fc0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58aa5c94, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b126187, org.springframework.security.web.session.SessionManagementFilter@30c01c37, org.springframework.security.web.access.ExceptionTranslationFilter@714f1a44, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1be8c122]
+2016-11-09 11:40:26.457  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:40:18 EET 2016]; root of context hierarchy
+2016-11-09 11:40:26.579  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lessons/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showLesson(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.581  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showCourse(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.582  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.LessonController.delete(long)
+2016-11-09 11:40:26.583  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/createuser],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.newUser(org.springframework.ui.Model)
+2016-11-09 11:40:26.584  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/success],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.584  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.index()
+2016-11-09 11:40:26.585  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_user],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.LoginController.create(org.springframework.ui.Model,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-11-09 11:40:26.593  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/new],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.newProject()
+2016-11-09 11:40:26.593  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/edit],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.edit(long,org.springframework.ui.Model)
+2016-11-09 11:40:26.593  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.update(long,java.lang.String)
+2016-11-09 11:40:26.594  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.delete(long)
+2016-11-09 11:40:26.594  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/create],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.create(java.lang.String)
+2016-11-09 11:40:26.594  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/info]}" onto public java.lang.String lv.smasys.controllers.PostController.userInfo(org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.598  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent]}" onto public java.lang.String lv.smasys.controllers.StudentController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.599  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.delete(long)
+2016-11-09 11:40:26.599  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/join_course],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.create(long,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.601  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/testteacher]}" onto public java.lang.String lv.smasys.controllers.TeacherController.listCourses(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.601  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newlesson],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newLesson(org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.602  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newcourse],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newCourse(org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.602  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_lesson],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createLesson(org.springframework.ui.Model,java.lang.String,double,java.lang.String,long,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.602  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_course],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createCourse(java.lang.String,java.lang.String,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 11:40:26.606  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-09 11:40:26.606  INFO 1033 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-09 11:40:26.636  INFO 1033 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:40:26.636  INFO 1033 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/list] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:40:26.636  INFO 1033 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/teststudent] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:40:26.657  INFO 1033 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:40:26.658  INFO 1033 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:40:26.732  INFO 1033 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:40:27.749  INFO 1033 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-09 11:40:27.837  INFO 1033 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-09 11:40:27.846  INFO 1033 --- [main] lv.smasys.Application                    : Started Application in 10.758 seconds (JVM running for 11.21)
+2016-11-09 11:40:40.827  INFO 1033 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-09 11:40:40.828  INFO 1033 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-09 11:40:40.848  INFO 1033 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2016-11-09 11:40:52.872  INFO 1033 --- [http-nio-8080-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-11-09 11:45:20.792  INFO 1033 --- [Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:40:18 EET 2016]; root of context hierarchy
+2016-11-09 11:45:20.795  INFO 1033 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-09 11:45:20.802  INFO 1033 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:45:39.694  INFO 1143 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 1143 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 11:45:39.696  INFO 1143 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 11:45:40.214  INFO 1143 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:45:40 EET 2016]; root of context hierarchy
+2016-11-09 11:45:42.508  INFO 1143 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 11:45:42.518  INFO 1143 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:45:42.615  INFO 1143 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:45:42.651  INFO 1143 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 11:45:42.817  INFO 1143 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 11:45:42.821  INFO 1143 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 11:45:42.825  INFO 1143 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 11:45:42.910  INFO 1143 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 11:45:43.555  INFO 1143 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 11:45:44.957  INFO 1143 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 11:45:45.337  INFO 1143 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:45:45.343  INFO 1143 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:45:45.346  INFO 1143 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [class lv.smasys.config.DatabaseConfig$$EnhancerBySpringCGLIB$$f56aaf3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:45:45.456  INFO 1143 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2818d30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:45:45.984  INFO 1143 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-09 11:45:46.011  INFO 1143 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-09 11:45:46.013  INFO 1143 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-11-09 11:45:46.203  INFO 1143 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-09 11:45:46.204  INFO 1143 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6004 ms
+2016-11-09 11:45:46.517  INFO 1143 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-09 11:45:46.518  INFO 1143 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-09 11:45:46.518  INFO 1143 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-09 11:45:46.518  INFO 1143 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-09 11:45:46.521  INFO 1143 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-09 11:45:46.521  INFO 1143 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-09 11:45:47.443  INFO 1143 --- [main] lv.smasys.config.SecurityConfig          : Config authentication complete
+2016-11-09 11:45:47.931  INFO 1143 --- [main] lv.smasys.config.SecurityConfig          : http security configuration complete
+2016-11-09 11:45:47.934  INFO 1143 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-11-09 11:45:47.934  INFO 1143 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/fonts/**'], []
+2016-11-09 11:45:47.935  INFO 1143 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/libs/**'], []
+2016-11-09 11:45:48.088  INFO 1143 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3193e21d, org.springframework.security.web.context.SecurityContextPersistenceFilter@45bd4753, org.springframework.security.web.header.HeaderWriterFilter@592a1882, org.springframework.security.web.csrf.CsrfFilter@32b112a1, org.springframework.security.web.authentication.logout.LogoutFilter@41143873, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55053f81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25fd6d1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3005623b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79604abe, org.springframework.security.web.session.SessionManagementFilter@41a23470, org.springframework.security.web.access.ExceptionTranslationFilter@77ecdc2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3dfe59d7]
+2016-11-09 11:45:48.346  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:45:40 EET 2016]; root of context hierarchy
+2016-11-09 11:45:48.490  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showCourse(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.493  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lessons/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showLesson(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.494  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.LessonController.delete(long)
+2016-11-09 11:45:48.496  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/createuser],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.newUser(org.springframework.ui.Model)
+2016-11-09 11:45:48.498  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/success],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.499  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.index()
+2016-11-09 11:45:48.500  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_user],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.LoginController.create(org.springframework.ui.Model,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-11-09 11:45:48.507  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/new],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.newProject()
+2016-11-09 11:45:48.508  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/edit],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.edit(long,org.springframework.ui.Model)
+2016-11-09 11:45:48.509  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.update(long,java.lang.String)
+2016-11-09 11:45:48.511  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.delete(long)
+2016-11-09 11:45:48.511  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/create],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.create(java.lang.String)
+2016-11-09 11:45:48.512  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/info]}" onto public java.lang.String lv.smasys.controllers.PostController.userInfo(org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.516  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent]}" onto public java.lang.String lv.smasys.controllers.StudentController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.518  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.delete(long)
+2016-11-09 11:45:48.519  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/join_course],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.create(long,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.522  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/testteacher]}" onto public java.lang.String lv.smasys.controllers.TeacherController.listCourses(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.522  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newlesson],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newLesson(org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.523  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newcourse],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newCourse(org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.523  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_lesson],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createLesson(org.springframework.ui.Model,java.lang.String,double,java.lang.String,long,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.524  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_course],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createCourse(java.lang.String,java.lang.String,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 11:45:48.528  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-09 11:45:48.529  INFO 1143 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-09 11:45:48.566  INFO 1143 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:45:48.567  INFO 1143 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/list] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:45:48.568  INFO 1143 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/teststudent] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:45:48.593  INFO 1143 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:45:48.594  INFO 1143 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:45:48.673  INFO 1143 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:45:49.695  INFO 1143 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-09 11:45:49.769  INFO 1143 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-09 11:45:49.777  INFO 1143 --- [main] lv.smasys.Application                    : Started Application in 10.634 seconds (JVM running for 11.117)
+2016-11-09 11:46:01.422  INFO 1143 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-09 11:46:01.423  INFO 1143 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-09 11:46:01.450  INFO 1143 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2016-11-09 11:46:22.504  INFO 1143 --- [http-nio-8080-exec-10] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-11-09 11:47:14.893  INFO 1143 --- [http-nio-8080-exec-8] lv.smasys.controllers.LoginController    : USER 'Mim MImson' created
+2016-11-09 11:47:21.333  INFO 1143 --- [http-nio-8080-exec-3] lv.smasys.controllers.StudentController  : Student 'Mim MImson' added to 'IT'
+2016-11-09 11:49:43.555  INFO 1143 --- [http-nio-8080-exec-7] lv.smasys.controllers.LoginController    : USER 'Kek Kekson' created
+2016-11-09 11:49:49.989  INFO 1143 --- [http-nio-8080-exec-2] lv.smasys.controllers.StudentController  : Student 'Kek Kekson' added to 'IT'
+2016-11-09 11:52:55.681  INFO 1143 --- [Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:45:40 EET 2016]; root of context hierarchy
+2016-11-09 11:52:55.683  INFO 1143 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-09 11:52:55.688  INFO 1143 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:53:12.871  INFO 1277 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 1277 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 11:53:12.874  INFO 1277 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 11:53:13.345  INFO 1277 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:53:13 EET 2016]; root of context hierarchy
+2016-11-09 11:53:15.618  INFO 1277 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 11:53:15.628  INFO 1277 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:53:15.713  INFO 1277 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:53:15.750  INFO 1277 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 11:53:15.862  INFO 1277 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 11:53:15.864  INFO 1277 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 11:53:15.868  INFO 1277 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 11:53:15.925  INFO 1277 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 11:53:16.568  INFO 1277 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 11:53:17.688  INFO 1277 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 11:53:18.123  INFO 1277 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 11:53:18.131  INFO 1277 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:53:18.134  INFO 1277 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [class lv.smasys.config.DatabaseConfig$$EnhancerBySpringCGLIB$$f56aaf3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:53:18.263  INFO 1277 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2818d30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 11:53:18.838  INFO 1277 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-09 11:53:18.865  INFO 1277 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-09 11:53:18.867  INFO 1277 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-11-09 11:53:19.096  INFO 1277 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-09 11:53:19.097  INFO 1277 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5756 ms
+2016-11-09 11:53:19.371  INFO 1277 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-09 11:53:19.372  INFO 1277 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-09 11:53:19.372  INFO 1277 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-09 11:53:19.373  INFO 1277 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-09 11:53:19.375  INFO 1277 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-09 11:53:19.376  INFO 1277 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-09 11:53:20.172  INFO 1277 --- [main] lv.smasys.config.SecurityConfig          : Config authentication complete
+2016-11-09 11:53:20.591  INFO 1277 --- [main] lv.smasys.config.SecurityConfig          : http security configuration complete
+2016-11-09 11:53:20.593  INFO 1277 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-11-09 11:53:20.593  INFO 1277 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/fonts/**'], []
+2016-11-09 11:53:20.593  INFO 1277 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/libs/**'], []
+2016-11-09 11:53:20.699  INFO 1277 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3193e21d, org.springframework.security.web.context.SecurityContextPersistenceFilter@45bd4753, org.springframework.security.web.header.HeaderWriterFilter@592a1882, org.springframework.security.web.csrf.CsrfFilter@32b112a1, org.springframework.security.web.authentication.logout.LogoutFilter@41143873, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55053f81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25fd6d1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3005623b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79604abe, org.springframework.security.web.session.SessionManagementFilter@41a23470, org.springframework.security.web.access.ExceptionTranslationFilter@77ecdc2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3dfe59d7]
+2016-11-09 11:53:20.847  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:53:13 EET 2016]; root of context hierarchy
+2016-11-09 11:53:20.949  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lessons/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showLesson(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.951  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showCourse(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.952  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.LessonController.delete(long)
+2016-11-09 11:53:20.953  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/createuser],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.newUser(org.springframework.ui.Model)
+2016-11-09 11:53:20.954  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/success],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.954  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.index()
+2016-11-09 11:53:20.955  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_user],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.LoginController.create(org.springframework.ui.Model,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-11-09 11:53:20.962  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/new],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.newProject()
+2016-11-09 11:53:20.962  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/edit],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.edit(long,org.springframework.ui.Model)
+2016-11-09 11:53:20.963  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.update(long,java.lang.String)
+2016-11-09 11:53:20.963  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.delete(long)
+2016-11-09 11:53:20.963  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/create],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.create(java.lang.String)
+2016-11-09 11:53:20.964  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/info]}" onto public java.lang.String lv.smasys.controllers.PostController.userInfo(org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.968  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent]}" onto public java.lang.String lv.smasys.controllers.StudentController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.968  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.delete(long)
+2016-11-09 11:53:20.969  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/join_course],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.create(long,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.971  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/testteacher]}" onto public java.lang.String lv.smasys.controllers.TeacherController.listCourses(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.971  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newlesson],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newLesson(org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.972  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newcourse],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newCourse(org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.972  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_lesson],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createLesson(org.springframework.ui.Model,java.lang.String,double,java.lang.String,long,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.973  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_course],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createCourse(java.lang.String,java.lang.String,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 11:53:20.976  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-09 11:53:20.977  INFO 1277 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-09 11:53:21.004  INFO 1277 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:53:21.005  INFO 1277 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/list] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:53:21.005  INFO 1277 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/teststudent] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 11:53:21.023  INFO 1277 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:53:21.024  INFO 1277 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:53:21.102  INFO 1277 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 11:53:22.186  INFO 1277 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-09 11:53:22.274  INFO 1277 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-09 11:53:22.282  INFO 1277 --- [main] lv.smasys.Application                    : Started Application in 9.982 seconds (JVM running for 10.447)
+2016-11-09 11:53:33.976  INFO 1277 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-09 11:53:33.976  INFO 1277 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-09 11:53:33.997  INFO 1277 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-11-09 11:53:40.544  INFO 1277 --- [http-nio-8080-exec-5] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-11-09 12:02:39.840  INFO 1277 --- [Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 11:53:13 EET 2016]; root of context hierarchy
+2016-11-09 12:02:39.844  INFO 1277 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-09 12:02:39.851  INFO 1277 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 12:02:57.805  INFO 1407 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 1407 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 12:02:57.813  INFO 1407 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 12:02:58.269  INFO 1407 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 12:02:58 EET 2016]; root of context hierarchy
+2016-11-09 12:03:00.709  INFO 1407 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 12:03:00.720  INFO 1407 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:03:00.814  INFO 1407 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 12:03:00.852  INFO 1407 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 12:03:01.001  INFO 1407 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 12:03:01.005  INFO 1407 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 12:03:01.011  INFO 1407 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 12:03:01.102  INFO 1407 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 12:03:01.699  INFO 1407 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 12:03:02.959  INFO 1407 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 12:03:03.409  INFO 1407 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 12:03:03.415  INFO 1407 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:03:03.418  INFO 1407 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [class lv.smasys.config.DatabaseConfig$$EnhancerBySpringCGLIB$$f56aaf3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:03:03.537  INFO 1407 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2818d30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:03:04.104  INFO 1407 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-09 12:03:04.126  INFO 1407 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-09 12:03:04.128  INFO 1407 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-11-09 12:03:04.310  INFO 1407 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-09 12:03:04.310  INFO 1407 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6047 ms
+2016-11-09 12:03:04.614  INFO 1407 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-09 12:03:04.615  INFO 1407 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-09 12:03:04.616  INFO 1407 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-09 12:03:04.617  INFO 1407 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-09 12:03:04.619  INFO 1407 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-09 12:03:04.620  INFO 1407 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-09 12:03:05.540  INFO 1407 --- [main] lv.smasys.config.SecurityConfig          : Config authentication complete
+2016-11-09 12:03:05.984  INFO 1407 --- [main] lv.smasys.config.SecurityConfig          : http security configuration complete
+2016-11-09 12:03:05.988  INFO 1407 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-11-09 12:03:05.988  INFO 1407 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/fonts/**'], []
+2016-11-09 12:03:05.988  INFO 1407 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/libs/**'], []
+2016-11-09 12:03:06.164  INFO 1407 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3193e21d, org.springframework.security.web.context.SecurityContextPersistenceFilter@45bd4753, org.springframework.security.web.header.HeaderWriterFilter@592a1882, org.springframework.security.web.csrf.CsrfFilter@32b112a1, org.springframework.security.web.authentication.logout.LogoutFilter@41143873, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55053f81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25fd6d1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3005623b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79604abe, org.springframework.security.web.session.SessionManagementFilter@41a23470, org.springframework.security.web.access.ExceptionTranslationFilter@77ecdc2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3dfe59d7]
+2016-11-09 12:03:06.346  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 12:02:58 EET 2016]; root of context hierarchy
+2016-11-09 12:03:06.480  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lessons/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showLesson(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.482  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showCourse(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.482  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.LessonController.delete(long)
+2016-11-09 12:03:06.484  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/success],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.484  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/createuser],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.newUser(org.springframework.ui.Model)
+2016-11-09 12:03:06.485  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.index()
+2016-11-09 12:03:06.485  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_user],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.LoginController.create(org.springframework.ui.Model,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-11-09 12:03:06.491  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/new],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.newProject()
+2016-11-09 12:03:06.492  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/edit],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.edit(long,org.springframework.ui.Model)
+2016-11-09 12:03:06.492  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.update(long,java.lang.String)
+2016-11-09 12:03:06.493  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.delete(long)
+2016-11-09 12:03:06.493  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/create],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.create(java.lang.String)
+2016-11-09 12:03:06.493  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/info]}" onto public java.lang.String lv.smasys.controllers.PostController.userInfo(org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.497  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent]}" onto public java.lang.String lv.smasys.controllers.StudentController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.498  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.delete(long)
+2016-11-09 12:03:06.498  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/join_course],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.create(long,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.500  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/testteacher]}" onto public java.lang.String lv.smasys.controllers.TeacherController.listCourses(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.500  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newlesson],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newLesson(org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.501  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newcourse],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newCourse(org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.501  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_lesson],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createLesson(org.springframework.ui.Model,java.lang.String,double,java.lang.String,long,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.501  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_course],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createCourse(java.lang.String,java.lang.String,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 12:03:06.505  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-09 12:03:06.506  INFO 1407 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-09 12:03:06.536  INFO 1407 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 12:03:06.536  INFO 1407 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/list] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 12:03:06.536  INFO 1407 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/teststudent] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 12:03:06.560  INFO 1407 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 12:03:06.560  INFO 1407 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 12:03:06.631  INFO 1407 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 12:03:07.649  INFO 1407 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-09 12:03:07.748  INFO 1407 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-09 12:03:07.759  INFO 1407 --- [main] lv.smasys.Application                    : Started Application in 10.541 seconds (JVM running for 11.079)
+2016-11-09 12:03:17.594  INFO 1407 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-09 12:03:17.594  INFO 1407 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-09 12:03:17.619  INFO 1407 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2016-11-09 12:03:24.652  INFO 1407 --- [http-nio-8080-exec-5] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-11-09 12:15:46.862  INFO 1407 --- [Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 12:02:58 EET 2016]; root of context hierarchy
+2016-11-09 12:15:46.865  INFO 1407 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-09 12:15:46.870  INFO 1407 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 12:16:04.631  INFO 1559 --- [main] lv.smasys.Application                    : Starting Application on jev-trav with PID 1559 (/home/student/NetBeansProjects/team2/mavenproject1/target/classes started by student in /home/student/NetBeansProjects/team2/mavenproject1)
+2016-11-09 12:16:04.635  INFO 1559 --- [main] lv.smasys.Application                    : No active profile set, falling back to default profiles: default
+2016-11-09 12:16:05.151  INFO 1559 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 12:16:05 EET 2016]; root of context hierarchy
+2016-11-09 12:16:07.487  INFO 1559 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-11-09 12:16:07.497  INFO 1559 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:16:07.589  INFO 1559 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-11-09 12:16:07.624  INFO 1559 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-11-09 12:16:07.781  INFO 1559 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-11-09 12:16:07.785  INFO 1559 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-11-09 12:16:07.788  INFO 1559 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-11-09 12:16:07.875  INFO 1559 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-09 12:16:08.495  INFO 1559 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-09 12:16:09.894  INFO 1559 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-11-09 12:16:10.914  INFO 1559 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-11-09 12:16:10.922  INFO 1559 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:16:10.925  INFO 1559 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [class lv.smasys.config.DatabaseConfig$$EnhancerBySpringCGLIB$$f56aaf3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:16:11.049  INFO 1559 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2818d30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-09 12:16:11.643  INFO 1559 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-09 12:16:11.670  INFO 1559 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-09 12:16:11.672  INFO 1559 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-11-09 12:16:11.873  INFO 1559 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-09 12:16:11.874  INFO 1559 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6736 ms
+2016-11-09 12:16:12.263  INFO 1559 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-09 12:16:12.264  INFO 1559 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-09 12:16:12.265  INFO 1559 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-09 12:16:12.266  INFO 1559 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-09 12:16:12.269  INFO 1559 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-09 12:16:12.270  INFO 1559 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-09 12:16:13.241  INFO 1559 --- [main] lv.smasys.config.SecurityConfig          : Config authentication complete
+2016-11-09 12:16:13.687  INFO 1559 --- [main] lv.smasys.config.SecurityConfig          : http security configuration complete
+2016-11-09 12:16:13.691  INFO 1559 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-11-09 12:16:13.692  INFO 1559 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/fonts/**'], []
+2016-11-09 12:16:13.694  INFO 1559 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/libs/**'], []
+2016-11-09 12:16:13.848  INFO 1559 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3193e21d, org.springframework.security.web.context.SecurityContextPersistenceFilter@45bd4753, org.springframework.security.web.header.HeaderWriterFilter@592a1882, org.springframework.security.web.csrf.CsrfFilter@32b112a1, org.springframework.security.web.authentication.logout.LogoutFilter@41143873, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55053f81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25fd6d1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3005623b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79604abe, org.springframework.security.web.session.SessionManagementFilter@41a23470, org.springframework.security.web.access.ExceptionTranslationFilter@77ecdc2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3dfe59d7]
+2016-11-09 12:16:14.058  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52e6fdee: startup date [Wed Nov 09 12:16:05 EET 2016]; root of context hierarchy
+2016-11-09 12:16:14.216  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showCourse(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.218  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lessons/{id}/show],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LessonController.showLesson(long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.219  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/course/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.LessonController.delete(long)
+2016-11-09 12:16:14.221  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/createuser],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.newUser(org.springframework.ui.Model)
+2016-11-09 12:16:14.221  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/success],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.221  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.LoginController.index()
+2016-11-09 12:16:14.222  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_user],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.LoginController.create(org.springframework.ui.Model,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-11-09 12:16:14.227  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/new],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.newProject()
+2016-11-09 12:16:14.227  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/edit],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.PostController.edit(long,org.springframework.ui.Model)
+2016-11-09 12:16:14.228  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.update(long,java.lang.String)
+2016-11-09 12:16:14.228  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.delete(long)
+2016-11-09 12:16:14.228  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/create],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.PostController.create(java.lang.String)
+2016-11-09 12:16:14.229  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/info]}" onto public java.lang.String lv.smasys.controllers.PostController.userInfo(org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.232  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/teststudent]}" onto public java.lang.String lv.smasys.controllers.StudentController.listPosts(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.233  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{id}/delete],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.delete(long)
+2016-11-09 12:16:14.233  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/join_course],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView lv.smasys.controllers.StudentController.create(long,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.234  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/posts/testteacher]}" onto public java.lang.String lv.smasys.controllers.TeacherController.listCourses(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.235  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newlesson],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newLesson(org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.236  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newcourse],methods=[GET]}" onto public java.lang.String lv.smasys.controllers.TeacherController.newCourse(org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.236  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_lesson],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createLesson(org.springframework.ui.Model,java.lang.String,double,java.lang.String,long,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.236  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/create_course],methods=[POST]}" onto public java.lang.String lv.smasys.controllers.TeacherController.createCourse(java.lang.String,java.lang.String,java.lang.String,org.springframework.security.core.Authentication)
+2016-11-09 12:16:14.240  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-09 12:16:14.241  INFO 1559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-09 12:16:14.281  INFO 1559 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 12:16:14.283  INFO 1559 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/posts/list] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 12:16:14.283  INFO 1559 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/teststudent] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-11-09 12:16:14.316  INFO 1559 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 12:16:14.317  INFO 1559 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 12:16:14.387  INFO 1559 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-09 12:16:15.560  INFO 1559 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-09 12:16:15.631  INFO 1559 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-09 12:16:15.639  INFO 1559 --- [main] lv.smasys.Application                    : Started Application in 11.605 seconds (JVM running for 12.077)
+2016-11-09 12:16:50.989  INFO 1559 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-09 12:16:50.990  INFO 1559 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-09 12:16:51.017  INFO 1559 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2016-11-09 12:17:03.194  INFO 1559 --- [http-nio-8080-exec-5] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

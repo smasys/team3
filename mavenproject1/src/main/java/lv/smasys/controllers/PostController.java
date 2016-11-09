@@ -23,14 +23,14 @@ public class PostController {
     private static final Logger log = LoggerFactory.getLogger(PostController.class);
     @Autowired
     private PostRepository repository;
-
-     @RequestMapping(value = "teststudent", method = RequestMethod.GET)
-    public String teststudentPosts(Model model, Authentication authentication) {       
-       
-        model.addAttribute("posts", repository.findAll());
-
-        return "posts/teststudent";
-    }
+//
+//     @RequestMapping(value = "teststudent", method = RequestMethod.GET)
+//    public String teststudentPosts(Model model, Authentication authentication) {       
+//       
+//        model.addAttribute("posts", repository.findAll());
+//
+//        return "posts/teststudent";
+//    }
 
 
     @RequestMapping(value = "/{id}/delete", method = RequestMethod.GET)

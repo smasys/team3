@@ -30,9 +30,9 @@ public class Lesson implements Serializable {
             nullable = true)
     private Teacher teacher;
     
-    @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "lessonid")
+    @OneToMany(mappedBy="lesson",targetEntity=Grade.class,cascade = {CascadeType.ALL})   
     private List<Grade> grades;
+    
     @Column(name = "description")
     private String description;
    

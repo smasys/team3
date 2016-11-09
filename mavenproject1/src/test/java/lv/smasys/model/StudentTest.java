@@ -195,27 +195,7 @@ public class StudentTest {
     /**
      * Test of getGrade method, of class Student.
      */
-    @Test
-    public void testGetGrade() {
-        System.out.println("getGrade");
-        Student instance = new Student();
-        Grade expResult = null;
-        Grade result = instance.getGrade();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of setGrade method, of class Student.
-     */
-    @Test
-    public void testSetGrade() {
-        System.out.println("setGrade");
-        Grade grade = null;
-        Student instance = new Student();
-        instance.setGrade(grade);
-        // TODO review the generated test code and remove the default call to fail.
-    }
+  
 
     /**
      * Test of getCourse method, of class Student.

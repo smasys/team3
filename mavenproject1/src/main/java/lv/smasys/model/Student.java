@@ -33,8 +33,16 @@ public class Student implements Serializable {
             nullable = true)
     private Course course;
 
-    @OneToOne(mappedBy = "student")
-    private Grade grade;
+    @OneToMany(mappedBy="student",targetEntity=Grade.class,cascade = {CascadeType.ALL})
+    private List<Grade> grades;
+
+    public List<Grade> getGrades() {
+        return grades;
+    }
+
+    public void setGrades(List<Grade> grades) {
+        this.grades = grades;
+    }
     
     
 
@@ -96,15 +104,7 @@ public class Student implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Grade getGrade() {
-        return grade;
-    }
-
-    public void setGrade(Grade grade) {
-        this.grade = grade;
-    }
+    }   
 
     public Course getCourse() {
         return course;

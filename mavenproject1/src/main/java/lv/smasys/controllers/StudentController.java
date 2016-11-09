@@ -93,10 +93,8 @@ public class StudentController {
     }
     
     public String getUsername(Authentication aut){
-        String username="";
-        for (GrantedAuthority authority : aut.getAuthorities()) {            
-            username = aut.getName();
-        }
+        String username="";                    
+        username = aut.getName();
         return username;
     }
     

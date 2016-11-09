@@ -13,15 +13,20 @@ public class Grade implements Serializable {
     //private int gradeid;
     //Student's grade for lesson
     @Id
-    @OneToOne
-    @JoinColumn(name = "studentid", insertable = false, updatable = false,
-            nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "gradeid")
+    private Long gradeid;
+    
+    
+    @ManyToOne
+    @JoinColumn(name = "studentid",referencedColumnName="studentid", 
+            nullable = true)
     private Student student;
 
     @ManyToOne
-    @JoinColumn(name = "lessonid",
-            insertable = false, updatable = false,
-            nullable = false)
+    @JoinColumn(name = "lessonid",referencedColumnName="lessonid", 
+            
+            nullable = true)
     private Lesson lesson;
 
     @Column(name = "grade")
@@ -33,7 +38,7 @@ public class Grade implements Serializable {
     public Grade() {
     }
 
-    public Grade(double grade, String date, Lesson lesson, Student student) {
+    public Grade(double grade, String date) {
         this.grade = grade;
         this.gradedate = date;
         this.lesson = lesson;
@@ -54,6 +59,14 @@ public class Grade implements Serializable {
 
     public void setGradedate(String gradedate) {
         this.gradedate = gradedate;
+    }
+
+    public Long getGradeid() {
+        return gradeid;
+    }
+
+    public void setGradeid(Long gradeid) {
+        this.gradeid = gradeid;
     }
 
     public Student getStudent() {
