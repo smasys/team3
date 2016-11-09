@@ -55,6 +55,10 @@ public class LessonController {
         Lesson lesson = lessonRepository.findOne(id);
         Course course = lesson.getCourse();
         
+//        if(getRole(authentication) == "ROLE_ADMIN"){
+//            
+//        }
+                
         model.addAttribute("lesson", lesson);
         model.addAttribute("students", course.getStudents());
         model.addAttribute("role",getRole(authentication));

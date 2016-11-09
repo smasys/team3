@@ -1,10 +1,10 @@
 <html layout:decorator="layout">
     <div layout:fragment="content">
                <p class="join_curse"><a class="new_course" href="/success">Cancel</a></p>
-
-<h1><span th:text="${lesson.title}" /></h1>
-<h2>Teacher: <span th:text="${lesson.teacher.firstname}" /> <span th:text="${lesson.teacher.lastname}" /></h2>
-<h3>Lesson Description: <span th:text="${lesson.description}" /></h3>
+               <br />
+<h2><span th:text="${lesson.title}" /></h2>
+<h4>Teacher: <span th:text="${lesson.teacher.firstname}" /> <span th:text="${lesson.teacher.lastname}" /></h4>
+<p>Lesson Description: <span th:text="${lesson.description}" /></p>
  
 
 
