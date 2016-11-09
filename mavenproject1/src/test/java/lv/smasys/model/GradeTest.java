@@ -58,7 +58,7 @@ public class GradeTest {
     public void testSetGrade() {
         System.out.println("setGrade");
         double grade = 0.0;
-        Grade instance = new Grade(13.37, "monkey", new Lesson(), new Student());
+        Grade instance = new Grade(13.37, "monkey");
         instance.setGrade(grade);
         // TODO review the generated test code and remove the default call to fail.
     }
@@ -85,6 +85,8 @@ public class GradeTest {
         System.out.println("setGradedate");
         String gradedate = "";
         Grade instance = new Grade();
+        instance.setGradeid(10l);
+        instance.getGradeid();
         instance.setGradedate(gradedate);
         // TODO review the generated test code and remove the default call to fail.
     }

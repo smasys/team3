@@ -5,6 +5,8 @@
  */
 package lv.smasys.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -219,6 +221,8 @@ public class StudentTest {
         Course course = null;
         Student instance = new Student();
         instance.setCourse(course);
+        instance.setGrades(new ArrayList<Grade>());
+        instance.getGrades();
         // TODO review the generated test code and remove the default call to fail.
     }
     
