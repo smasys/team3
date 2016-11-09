@@ -112,6 +112,22 @@ button.register_form:hover {
     background-color: silver;
     cursor: pointer;
 }
+button.create_form{
+    margin-top: 0px;
+    margin-bottom: 3px;
+    padding: 6px 20px;
+    background-color: darkslategray;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; 
+    color: white; 
+    font-weight: bold;
+    border: 0px solid #4CAF50;
+    border-radius: 4px 4px 4px 4px;
+}
+button.create_form:hover {    
+    background-color: silver;
+    cursor: pointer;
+}
 /********** HEADER **********/
 div.header {
     margin: 0 auto;

@@ -8,17 +8,17 @@
         <div class="register">
         <form method="post" name="lesson_form"  th:action="@{/create_lesson}">            
                 <label for="title">Lesson Title:</label> <br />
-                <input type="text" name="title"/> <br />
+                <input class="form" type="text" name="title"/> <br />
                 <label for="crpoints">Credit Points:</label> <br />
-                <input type="text" name="crpoints"/> <br />
+                <input class="form" type="text" name="crpoints"/> <br />
                 <label for="courseid">Course Id:</label> <br />
-                <input type="text" name="courseid"/> <br />                
+                <input class="form" type="text" name="courseid"/> <br />                
                 <label for="password">Course Password:</label> <br />
-                <input type="password" name="password"/> <br />
+                <input class="form" type="password" name="password"/> <br />
                 <label for="description">Description:</label> <br />
-                <input type="text" name="description"/> <br />
+                <input class="form" type="text" name="description"/> <br />
                 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" /> <br />
-                <button type="submit" id="submit" class="register_form">Create</button>
+                <button type="submit" id="submit" class="create_form">Create</button>
         </form>        
         </div>
     </div>

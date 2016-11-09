@@ -7,13 +7,13 @@
         <div class="register">
         <form method="post" name="course_form"  th:action="@{/create_course}">            
                 <label for="title">Title:</label> <br />
-                <input type="text" name="title"/> <br />
+                <input class="form" type="text" name="title"/> <br />
                 <label for="description">Description:</label> <br />
-                <input type="text" name="description"/> <br />
+                <input class="form" type="text" name="description"/> <br />
                 <label for="password">Password:</label> <br />
-                <input type="password" name="password"/> <br />               
+                <input class="form" type="password" name="password"/> <br />               
                 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" /> <br />
-                <button type="submit" id="submit" class="register_form">Create</button>
+                <button type="submit" id="submit" class="create_form">Create</button>
         </form>   
         </div>
        
