@@ -108,7 +108,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/create_user", method = RequestMethod.POST)
-    public String create(@RequestParam("name") String name,
+    public String create(Model model,@RequestParam("name") String name,
             @RequestParam("surname") String surname,
             @RequestParam("phone") String phone,
             @RequestParam("email") String email,
@@ -133,12 +133,16 @@ public class LoginController {
                     log.info("ADMIN '" + name + " " + surname + "' created");
                 }
             } else {
+                
                 log.error("Can't create new " + role + ": Wrong input");
-                return "posts/login";
+                model.addAttribute("fail","Wrong input, user was not created!");
+                
+                return "createuser";
             }
         } else {
             log.error("Can't create new " + role + ": Empty input");
-            return "posts/login";
+            model.addAttribute("fail","Please fill all the fields!");
+            return "createuser";
         }
 
         return "posts/login";

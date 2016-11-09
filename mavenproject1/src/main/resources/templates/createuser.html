@@ -12,6 +12,7 @@
     <body>
         <div class="container">
             <h1 class="login">Register:</h1>
+             <h3><span th:text="${fail}" /></h3>
             <div class="register">
                 <form method="post" name="comment_form" id="comment_form" th:action="@{/create_user}" >
                     <label for="email">Name</label><br />             
@@ -28,7 +29,7 @@
                     <input class="form" type="text" name="role" /><br />-->
                     
                     <input type="radio" th:name="${'roles'}" value="ROLE_ADMIN" />Teacher<br />
-                    <input type="radio" th:name="${'roles'}" value="ROLE_USER" />Student<br />
+                    <input type="radio" th:name="${'roles'}" value="ROLE_USER"/>Student<br />
                   
 
                     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
