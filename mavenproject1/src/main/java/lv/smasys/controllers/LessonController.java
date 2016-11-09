@@ -51,10 +51,14 @@ public class LessonController {
 
     @RequestMapping(value = "lessons/{id}/show", method = RequestMethod.GET)
     public String showLesson(@PathVariable long id,
-            Model model) {
+            Model model, Authentication authentication) {
         Lesson lesson = lessonRepository.findOne(id);
         Course course = lesson.getCourse();
         
+//        if(getRole(authentication) == "ROLE_ADMIN"){
+//            
+//        }
+                
         model.addAttribute("lesson", lesson);
         model.addAttribute("students", course.getStudents());
         return "posts/lessonpage";
