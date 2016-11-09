@@ -37,7 +37,7 @@
                 <tr>
                     <th>Course Name</th>
                     <th>Your Lesson</th>
-                    
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,6 +54,13 @@
                            <span th:text="${lesson.title}" />
                         </a>
                      </td> 
+             
+                    <td>
+                    
+                     <a class="btn btn-danger btn-sm" th:href="@{'/lesson/{id}/delete'(id=${lesson.lessonid})}" th:attr="name=${lesson.title}">
+                           X
+                        </a>
+                    </td>
                     
                 </tr>
             </tbody>
