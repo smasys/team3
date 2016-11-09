@@ -1,7 +1,5 @@
 <html layout:decorator="layout">
     <div layout:fragment="content">
-
-
         
 <!--        <a href="/newcourse" class="join_curse"> <button type="button">Create Course</button></a>
         <a href="/newlesson" class="join_curse"> <button type="button">Create Lesson</button></a>-->
@@ -12,16 +10,14 @@
         
         </td></tr></table>
 
-        <h1>Hello Teacher<!--<span th:text="${user.message}" />--></h1>
-
-        <h2>Create New Course or a New Lesson</h2><br/>
+      
 
 
-        <a href="/new_course"> <button type="button">Create Course</button></a>
-        <a href="/new_lesson"> <button type="button">Create Lesson</button></a>
 
-
-        <table>
+   
+<br />
+<br />
+<table class="courses">
             <thead>
                 <tr>
                     <th>Course you created</th>
@@ -36,7 +32,7 @@
             </tbody>
         </table>
 
-        <table>
+        <table class="courses">
             <thead>
                 <tr>
                     <th>Course Name</th>
@@ -63,4 +59,5 @@
             </tbody>
         </table>
     </div>
+
 </html>

@@ -91,7 +91,7 @@ public class TeacherController {
             } else {
                 model.addAttribute("message", "Wrong Password!");
                 log.error("Can't create new lesson: Wrong Password");
-                return "newlesson";
+                return "posts/newlesson";
             }
         }
 
