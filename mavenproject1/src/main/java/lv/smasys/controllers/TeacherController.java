@@ -49,7 +49,7 @@ public class TeacherController {
             } else {
                 model.addAttribute("course", new Course("Add course"));
             }
-
+            model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
         }
 
         //model.addAttribute("courses", courseRepository.findAll());
@@ -65,12 +65,20 @@ public class TeacherController {
     }
 
     @RequestMapping(value = "/newlesson", method = RequestMethod.GET)
-    public String newLesson(Authentication authentication) {
+    public String newLesson(Authentication authentication, Model model) {
+        List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
+        for (Teacher t : teachers) {
+        model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
+        }
         return "posts/newlesson";
     }
 
     @RequestMapping(value = "/newcourse", method = RequestMethod.GET)
-    public String newCourse(Authentication authentication) {
+    public String newCourse(Authentication authentication, Model model) {
+        List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
+        for (Teacher t : teachers) {
+        model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
+        }
         return "posts/newcourse";
     }
 
@@ -79,6 +87,7 @@ public class TeacherController {
 
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
+            model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
             Lesson lesson = new Lesson(title, crpoints, t);
             lesson.setCourse(courseRepository.findOne(courseid));
             if (description != null) {
@@ -107,6 +116,7 @@ public class TeacherController {
 
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
+                        
             Course course = new Course(title);
             course.setTeacher(t);
             course.setDescription(description);

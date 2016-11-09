@@ -5,10 +5,12 @@
  */
 package lv.smasys.controllers;
 
+import java.util.List;
 import lv.smasys.model.Course;
 import lv.smasys.model.Lesson;
 import lv.smasys.model.Post;
 import lv.smasys.model.Student;
+import lv.smasys.model.Teacher;
 import lv.smasys.repository.CourseRepository;
 import lv.smasys.repository.LessonRepository;
 import lv.smasys.repository.StudentRepository;
@@ -53,11 +55,21 @@ public class LessonController {
     public String showLesson(@PathVariable long id,
             Model model, Authentication authentication) {
         Lesson lesson = lessonRepository.findOne(id);
-        Course course = lesson.getCourse();
+        Course course = lesson.getCourse();        
         
-//        if(getRole(authentication) == "ROLE_ADMIN"){
-//            
-//        }
+        String username = getUsername(authentication);
+        if("ROLE_ADMIN".equals(getRole(authentication))){
+            
+            List<Teacher> teachers =teacherRepository.findByMail(username);
+            for(Teacher t : teachers){                
+                model.addAttribute("user",t.getFirstname()+" "+t.getLastname());
+            }
+        }else{
+            List<Student> students =studentRepository.findByMail(username);        
+            for(Student s : students){
+                model.addAttribute("user",s.getFirstname()+" "+s.getLastname());
+            }
+        }
                 
         model.addAttribute("lesson", lesson);
         model.addAttribute("students", course.getStudents());
@@ -70,6 +82,20 @@ public class LessonController {
             Model model, Authentication authentication) {
        // Lesson lesson = lessonRepository.findOne(id);
         Course course = courseRepository.findOne(id);
+        
+        String username = getUsername(authentication);
+        if("ROLE_ADMIN".equals(getRole(authentication))){
+            
+            List<Teacher> teachers =teacherRepository.findByMail(username);
+            for(Teacher t : teachers){                
+                model.addAttribute("user",t.getFirstname()+" "+t.getLastname());
+            }
+        }else{
+            List<Student> students =studentRepository.findByMail(username);        
+            for(Student s : students){
+                model.addAttribute("user",s.getFirstname()+" "+s.getLastname());
+            }
+        }
         
         model.addAttribute("course", course);
         model.addAttribute("students", course.getStudents());
@@ -95,4 +121,12 @@ public class LessonController {
         }
         return role;
     }
+       public String getUsername(Authentication aut){
+        String username="";
+        for (GrantedAuthority authority : aut.getAuthorities()) {            
+            username = aut.getName();
+        }
+        return username;
+    }
+    
 }

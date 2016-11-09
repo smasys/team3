@@ -56,7 +56,8 @@ public class StudentController {
             }else{
                 model.addAttribute("course",new Course("Add course"));
             }
-            
+            model.addAttribute("user",s.getFirstname()+" "+s.getLastname()); 
+
         }
         
         //model.addAttribute("courses", courseRepository.findAll());
@@ -75,7 +76,7 @@ public class StudentController {
     
     //Add current student to course
     @RequestMapping(value = "/student/join_course", method = RequestMethod.POST)
-    public ModelAndView create(@RequestParam("courseid") long courseid,Authentication authentication) {
+    public ModelAndView create(@RequestParam("courseid") long courseid,Authentication authentication, Model model) {
         String role="";
         String email="";
         for (GrantedAuthority authority : authentication.getAuthorities()) {
@@ -88,6 +89,7 @@ public class StudentController {
             Course course = courseRepository.findOne(courseid);
             s.setCourse(course);
            studentRepository.save(s);
+           model.addAttribute("user",s.getFirstname()+" "+s.getLastname());
            log.info("Student '"+s.getFirstname()+" "+s.getLastname()+"' added to '"+course.getTitle()+"'");
         }
              
