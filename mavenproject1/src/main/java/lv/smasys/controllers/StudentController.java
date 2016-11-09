@@ -49,7 +49,9 @@ public class StudentController {
         List<Student> students =studentRepository.findByMail(username);        
         for(Student s : students){  
             if(s.getCourse()!=null){
+               
                 model.addAttribute("course",s.getCourse()); 
+                model.addAttribute("user",s.getFirstname()+" "+s.getLastname()); 
                 model.addAttribute("lessons",s.getCourse().getLessons());
             }else{
                 model.addAttribute("course",new Course("Add course"));

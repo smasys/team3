@@ -44,6 +44,7 @@ public class TeacherController {
             if (t.getCourses() != null) {
                 //model.addAttribute("course",t.getCourses()); 
                 model.addAttribute("courses", t.getCourses());
+                model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
                 model.addAttribute("lessons", t.getLessons());
             } else {
                 model.addAttribute("course", new Course("Add course"));
