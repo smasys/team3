@@ -34,22 +34,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-        try {
-            auth.jdbcAuthentication().dataSource(dataSource)
-                    .usersByUsernameQuery(
-                            "select username,password, enabled from users where username=?")
-                    .authoritiesByUsernameQuery(
-                            "select username, authority from authorities where username=?");
-            log.info("Config authentication complete");
-        } catch (Exception e) {
-            log.error("Unable to config authentication to '" + auth + "': " + e.getMessage());
-        }
+//        try {
+        auth.jdbcAuthentication().dataSource(dataSource)
+                .usersByUsernameQuery(
+                        "select username,password, enabled from users where username=?")
+                .authoritiesByUsernameQuery(
+                        "select username, authority from authorities where username=?");
+        log.info("Config authentication complete");
+//        } catch (Exception e) {
+//            log.error("Unable to config authentication to '" + auth + "': " + e.getMessage());
+//        }
 
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        try{
+//        try{
         http
                 .authorizeRequests().antMatchers("/createuser", "/create_user").permitAll()
                 .anyRequest().authenticated();
@@ -61,11 +61,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf()
                 .csrfTokenRepository(csrfTokenRepository());
-           log.info("http security configuration complete");
-        } catch (Exception e) {
-            log.error("Unable to config http security  '" + http + "': " + e.getMessage());
-        }
-
+//           log.info("http security configuration complete");
+//        } catch (Exception e) {
+//            log.error("Unable to config http security  '" + http + "': " + e.getMessage());
+//        }
     }
 
     private CsrfTokenRepository csrfTokenRepository() {
