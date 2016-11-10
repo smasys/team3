@@ -3,9 +3,12 @@
         <p class="join_curse"><a class="new_course" href="/success">Cancel</a></p>
         <br />
         <h3>Create new Lesson:</h3>
+        <h3><span th:text="${eempty}" /></h3>
+        <h3><span th:text="${ecourseid}" /></h3>
         
         <p><span th:text="${message}" /></p>
         <div class="register">
+           
         <form method="post" name="lesson_form"  th:action="@{/create_lesson}">            
                 <label for="title">Lesson Title:</label> <br />
                 <input class="form" type="text" name="title"/> <br />

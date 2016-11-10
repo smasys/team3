@@ -108,9 +108,11 @@ public class TeacherController {
                         return "posts/newlesson";
                     }
                 } else {
+                    model.addAttribute("ecourseid","Wrong Course ID, Such course doesnt exist!");
                     return "posts/newlesson";
                 }
             } else {
+                model.addAttribute("eempty","Please, fill in all the fields!");
                 return "posts/newlesson";
             }
         }
