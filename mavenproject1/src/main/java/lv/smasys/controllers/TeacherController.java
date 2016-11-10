@@ -46,12 +46,12 @@ public class TeacherController {
             if (t.getCourses() != null) {
                 //model.addAttribute("course",t.getCourses()); 
                 model.addAttribute("courses", t.getCourses());
-                model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
+                model.addAttribute("user", t.getFirstname() + " " + t.getLastname());
                 model.addAttribute("lessons", t.getLessons());
             } else {
                 model.addAttribute("course", new Course("Add course"));
             }
-            model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
+            model.addAttribute("user", t.getFirstname() + " " + t.getLastname());
         }
 
         //model.addAttribute("courses", courseRepository.findAll());
@@ -70,7 +70,7 @@ public class TeacherController {
     public String newLesson(Authentication authentication, Model model) {
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
-        model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
+            model.addAttribute("user", t.getFirstname() + " " + t.getLastname());
         }
         return "posts/newlesson";
     }
@@ -79,7 +79,7 @@ public class TeacherController {
     public String newCourse(Authentication authentication, Model model) {
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
-        model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
+            model.addAttribute("user", t.getFirstname() + " " + t.getLastname());
         }
         return "posts/newcourse";
     }
@@ -89,20 +89,28 @@ public class TeacherController {
 
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
-            model.addAttribute("user",t.getFirstname()+" "+t.getLastname()); 
+            model.addAttribute("user", t.getFirstname() + " " + t.getLastname());
+            if (!password.isEmpty() && !title.isEmpty() && crpoints!=0 && courseid!=0) {
             Lesson lesson = new Lesson(title, crpoints, t);
             lesson.setCourse(courseRepository.findOne(courseid));
-            if (description != null) {
-                lesson.setDescription(description);
-            }
-            if (courseRepository.findOne(courseid).getPassword().equals(password)) {
+                if (courseRepository.exists(courseid)) {
+                    if (description != null) {
+                        lesson.setDescription(description);
+                    }
+                    if (courseRepository.findOne(courseid).getPassword().equals(password)) {
 
-                lessonRepository.save(lesson);
+                        lessonRepository.save(lesson);
 
-                log.info("Lesson '" + lesson.getTitle() + "' created by " + t.getFirstname() + " " + t.getLastname());
+                        log.info("Lesson '" + lesson.getTitle() + "' created by " + t.getFirstname() + " " + t.getLastname());
+                    } else {
+                        model.addAttribute("message", "Wrong Password!");
+                        log.error("Can't create new lesson: Wrong Password");
+                        return "posts/newlesson";
+                    }
+                } else {
+                    return "posts/newlesson";
+                }
             } else {
-                model.addAttribute("message", "Wrong Password!");
-                log.error("Can't create new lesson: Wrong Password");
                 return "posts/newlesson";
             }
         }
@@ -118,7 +126,7 @@ public class TeacherController {
 
         List<Teacher> teachers = teacherRepository.findByMail(getUsername(authentication));
         for (Teacher t : teachers) {
-                        
+
             Course course = new Course(title);
             course.setTeacher(t);
             course.setDescription(description);
@@ -129,8 +137,9 @@ public class TeacherController {
 
         return "redirect:posts/testteacher";
     }
-            @RequestMapping(value = "/lesson/{id}/delete", method = RequestMethod.GET)
-    public String delete(@PathVariable long id) {     
+
+    @RequestMapping(value = "/lesson/{id}/delete", method = RequestMethod.GET)
+    public String delete(@PathVariable long id) {
         lessonRepository.delete(id);
         return "redirect:/posts/testteacher";
     }
