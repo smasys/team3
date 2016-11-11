@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Authorities" package="lv.smasys.model" visibility="public" xPosition="1178.0" yPosition="638.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="authority" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="authority"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getAuthority" returnType="String" visibility="public"/>
+        <Method name="setAuthority" returnType="void" visibility="public">
+          <Argument type="String" name="authority"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Course" package="lv.smasys.model" visibility="public" xPosition="28.0" yPosition="603.0">
+      <Fields>
+        <Field name="courseid" type="long" visibility="private"/>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="description" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="lessons" type="List&lt;Lesson&gt;" visibility="private"/>
+        <Field name="students" type="List&lt;Student&gt;" visibility="private"/>
+        <Field name="teacher" type="Teacher" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCourseid" returnType="long" visibility="public"/>
+        <Method name="setCourseid" returnType="void" visibility="public">
+          <Argument type="long" name="courseid"/>
+        </Method>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="setDescription" returnType="void" visibility="public">
+          <Argument type="String" name="description"/>
+        </Method>
+        <Method name="getLessons" returnType="List&lt;Lesson&gt;" visibility="public"/>
+        <Method name="getTeacher" returnType="Teacher" visibility="public"/>
+        <Method name="setTeacher" returnType="void" visibility="public">
+          <Argument type="Teacher" name="teacher"/>
+        </Method>
+        <Method name="setLessons" returnType="void" visibility="public">
+          <Argument type="List&lt;Lesson&gt;" name="lessons"/>
+        </Method>
+        <Method name="getStudents" returnType="List&lt;Student&gt;" visibility="public"/>
+        <Method name="setStudents" returnType="void" visibility="public">
+          <Argument type="List&lt;Student&gt;" name="students"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Grade" package="lv.smasys.model" visibility="public" xPosition="687.0" yPosition="143.0">
+      <Fields>
+        <Field name="gradeid" type="Long" visibility="private"/>
+        <Field name="student" type="Student" visibility="private"/>
+        <Field name="lesson" type="Lesson" visibility="private"/>
+        <Field name="grade" type="double" visibility="private"/>
+        <Field name="gradedate" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="grade"/>
+          <Argument type="String" name="date"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGrade" returnType="double" visibility="public"/>
+        <Method name="setGrade" returnType="void" visibility="public">
+          <Argument type="double" name="grade"/>
+        </Method>
+        <Method name="getGradedate" returnType="String" visibility="public"/>
+        <Method name="setGradedate" returnType="void" visibility="public">
+          <Argument type="String" name="gradedate"/>
+        </Method>
+        <Method name="getGradeid" returnType="Long" visibility="public"/>
+        <Method name="setGradeid" returnType="void" visibility="public">
+          <Argument type="Long" name="gradeid"/>
+        </Method>
+        <Method name="getStudent" returnType="Student" visibility="public"/>
+        <Method name="setStudent" returnType="void" visibility="public">
+          <Argument type="Student" name="student"/>
+        </Method>
+        <Method name="getLesson" returnType="Lesson" visibility="public"/>
+        <Method name="setLesson" returnType="void" visibility="public">
+          <Argument type="Lesson" name="lesson"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Lesson" package="lv.smasys.model" visibility="public" xPosition="28.0" yPosition="20.0">
+      <Fields>
+        <Field name="lessonid" type="long" visibility="private"/>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="crpoints" type="double" visibility="private"/>
+        <Field name="course" type="Course" visibility="private"/>
+        <Field name="teacher" type="Teacher" visibility="private"/>
+        <Field name="grades" type="List&lt;Grade&gt;" visibility="private"/>
+        <Field name="description" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+          <Argument type="double" name="crpoints"/>
+          <Argument type="Teacher" name="teacher"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLessonid" returnType="long" visibility="public"/>
+        <Method name="setLessonid" returnType="void" visibility="public">
+          <Argument type="long" name="lessonid"/>
+        </Method>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getCrpoints" returnType="double" visibility="public"/>
+        <Method name="setCrpoints" returnType="void" visibility="public">
+          <Argument type="double" name="crpoints"/>
+        </Method>
+        <Method name="getCourse" returnType="Course" visibility="public"/>
+        <Method name="setCourse" returnType="void" visibility="public">
+          <Argument type="Course" name="course"/>
+        </Method>
+        <Method name="getTeacher" returnType="Teacher" visibility="public"/>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="setDescription" returnType="void" visibility="public">
+          <Argument type="String" name="description"/>
+        </Method>
+        <Method name="setTeacher" returnType="void" visibility="public">
+          <Argument type="Teacher" name="teacher"/>
+        </Method>
+        <Method name="getGrades" returnType="List&lt;Grade&gt;" visibility="public"/>
+        <Method name="setGrades" returnType="void" visibility="public">
+          <Argument type="List&lt;Grade&gt;" name="grades"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Post" package="lv.smasys.model" visibility="public" xPosition="1178.0" yPosition="904.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="message" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="getMessage" returnType="String" visibility="public"/>
+        <Method name="setMessage" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Roles" package="lv.smasys.model" visibility="public" xPosition="1567.0" yPosition="955.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Student" package="lv.smasys.model" visibility="public" xPosition="534.0" yPosition="638.0">
+      <Fields>
+        <Field name="studentid" type="Long" visibility="private"/>
+        <Field name="firstname" type="String" visibility="private"/>
+        <Field name="lastname" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="course" type="Course" visibility="private"/>
+        <Field name="grades" type="List&lt;Grade&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="firstname"/>
+          <Argument type="String" name="lastname"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGrades" returnType="List&lt;Grade&gt;" visibility="public"/>
+        <Method name="setGrades" returnType="void" visibility="public">
+          <Argument type="List&lt;Grade&gt;" name="grades"/>
+        </Method>
+        <Method name="getStudentid" returnType="Long" visibility="public"/>
+        <Method name="setStudentid" returnType="void" visibility="public">
+          <Argument type="Long" name="studentid"/>
+        </Method>
+        <Method name="getFirstname" returnType="String" visibility="public"/>
+        <Method name="setFirstname" returnType="void" visibility="public">
+          <Argument type="String" name="firstname"/>
+        </Method>
+        <Method name="getLastname" returnType="String" visibility="public"/>
+        <Method name="setLastname" returnType="void" visibility="public">
+          <Argument type="String" name="lastname"/>
+        </Method>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="getMail" returnType="String" visibility="public"/>
+        <Method name="setMail" returnType="void" visibility="public">
+          <Argument type="String" name="mail"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getCourse" returnType="Course" visibility="public"/>
+        <Method name="setCourse" returnType="void" visibility="public">
+          <Argument type="Course" name="course"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Teacher" package="lv.smasys.model" visibility="public" xPosition="1265.0" yPosition="9.0">
+      <Fields>
+        <Field name="teacherid" type="Long" visibility="private"/>
+        <Field name="firstname" type="String" visibility="private"/>
+        <Field name="lastname" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="lessons" type="List&lt;Lesson&gt;" visibility="private"/>
+        <Field name="courses" type="List&lt;Course&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="firstname"/>
+          <Argument type="String" name="lastname"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTeacherid" returnType="Long" visibility="public"/>
+        <Method name="setTeacherid" returnType="void" visibility="public">
+          <Argument type="Long" name="teacherid"/>
+        </Method>
+        <Method name="getFirstname" returnType="String" visibility="public"/>
+        <Method name="setFirstname" returnType="void" visibility="public">
+          <Argument type="String" name="firstname"/>
+        </Method>
+        <Method name="getLastname" returnType="String" visibility="public"/>
+        <Method name="getLessons" returnType="List&lt;Lesson&gt;" visibility="public"/>
+        <Method name="getCourses" returnType="List&lt;Course&gt;" visibility="public"/>
+        <Method name="setCourses" returnType="void" visibility="public">
+          <Argument type="List&lt;Course&gt;" name="courses"/>
+        </Method>
+        <Method name="setLessons" returnType="void" visibility="public">
+          <Argument type="List&lt;Lesson&gt;" name="lessons"/>
+        </Method>
+        <Method name="setLastname" returnType="void" visibility="public">
+          <Argument type="String" name="lastname"/>
+        </Method>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="getMail" returnType="String" visibility="public"/>
+        <Method name="setMail" returnType="void" visibility="public">
+          <Argument type="String" name="mail"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="lv.smasys.model" visibility="public" xPosition="1553.0" yPosition="638.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="enabled" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isEnabled" returnType="boolean" visibility="public"/>
+        <Method name="setEnabled" returnType="void" visibility="public">
+          <Argument type="boolean" name="enabled"/>
+        </Method>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="course" source="lv.smasys.model.Lesson" target="lv.smasys.model.Course" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Lesson" target="lv.smasys.model.Grade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lessons" source="lv.smasys.model.Teacher" target="lv.smasys.model.Lesson" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Lesson&gt;"/>
+    <HasRelation name="student" source="lv.smasys.model.Grade" target="lv.smasys.model.Student" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="course" source="lv.smasys.model.Student" target="lv.smasys.model.Course" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Course" target="lv.smasys.model.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Student" target="lv.smasys.model.Course" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Lesson" target="lv.smasys.model.Course" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="teacher" source="lv.smasys.model.Lesson" target="lv.smasys.model.Teacher" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Grade" target="lv.smasys.model.Lesson" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lessons" source="lv.smasys.model.Course" target="lv.smasys.model.Lesson" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Lesson&gt;"/>
+    <UseRelation source="lv.smasys.model.Teacher" target="lv.smasys.model.Lesson" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Student" target="lv.smasys.model.Grade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Course" target="lv.smasys.model.Teacher" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="grades" source="lv.smasys.model.Lesson" target="lv.smasys.model.Grade" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Grade&gt;"/>
+    <UseRelation source="lv.smasys.model.Teacher" target="lv.smasys.model.Course" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="courses" source="lv.smasys.model.Teacher" target="lv.smasys.model.Course" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Course&gt;"/>
+    <HasRelation name="teacher" source="lv.smasys.model.Course" target="lv.smasys.model.Teacher" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="students" source="lv.smasys.model.Course" target="lv.smasys.model.Student" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Student&gt;"/>
+    <HasRelation name="lesson" source="lv.smasys.model.Grade" target="lv.smasys.model.Lesson" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Course" target="lv.smasys.model.Lesson" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="grades" source="lv.smasys.model.Student" target="lv.smasys.model.Grade" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Grade&gt;"/>
+    <UseRelation source="lv.smasys.model.Lesson" target="lv.smasys.model.Teacher" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lv.smasys.model.Grade" target="lv.smasys.model.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
